@@ -1,6 +1,17 @@
-@use './base/reset.scss';
+// Importando abstrações para uso global
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+// Estilos globais
+@use 'base/reset';
+@use 'base/typography';
+
+// Componentes
 @use './components/nav.scss';
 @use './components/cards.scss';
+@use './components/lists.scss';
+
+// Layouts
 @use './layouts/globals.scss';
 @use './layouts/article.scss';
 @use './layouts/hero.scss';

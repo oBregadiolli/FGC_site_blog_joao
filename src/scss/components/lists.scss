@@ -1,0 +1,24 @@
+ul[role="list"] {
+    list-style: none; // Remove o marcador padrão
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; // Espaçamento entre os itens
+    li {
+        display: flex;
+        align-items: center; // Alinha texto e ícone na vertical
+        gap: 0.5rem; // Espaçamento entre o ícone e o texto
+    }
+}
+
+
+.material-symbols-rounded {
+    font-variation-settings:
+        'FILL' 0, // Preenchimento (0 = borda, 1 = preenchido)
+        'wght' 300, // Peso (300 ou 400)
+        'GRAD' 0, // Gradiente
+        'opsz' 24; // Tamanho óptico (24px)
+    color: #000000; // Cor do ícone (verde)
+    font-size: 1rem; // Ajuste do tamanho do ícone
+}

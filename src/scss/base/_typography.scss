@@ -1,0 +1,10 @@
+// base/_typography.scss
+@use '../abstracts/mixins';
+
+h1 {
+  @include mixins.responsive-font-map(h1);
+}
+
+p {
+  @include mixins.responsive-font-map(p);
+}
