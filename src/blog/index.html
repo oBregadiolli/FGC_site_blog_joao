@@ -1,0 +1,47 @@
+---
+pagination:
+  data: collections.posts
+  size: 3
+  alias: paginatedPosts
+permalink: /blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}
+layout: layouts/base.html
+title: Blog
+---
+
+<h1>{{ title }}</h1>
+
+<!-- Lista de Todos os Posts do Site -->
+<ol>
+    {% for post in paginatedPosts %}
+    <li>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+    {% endfor %}
+</ol>
+
+<!-- Paginação funcionando! -->
+<div class="pagination">
+  <!-- Link para página anterior -->
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" class="enabled">← Página Anterior</a>
+  {% else %}
+    <span class="disabled">← Página Anterior</span>
+  {% endif %}
+
+  <!-- Números das páginas -->
+  {% for pageNumber in pagination.pages %}
+    {% if pageNumber === pagination.pageNumber %}
+      <span class="current-page">{{ loop.index }}</span>
+    {% else %}
+      <a href="{{ pagination.hrefs[loop.index0] }}">{{ loop.index }}</a>
+    {% endif %}
+  {% endfor %}
+
+  <!-- Link para próxima página -->
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" class="enabled">Próxima Página →</a>
+  {% else %}
+    <span class="disabled">Próxima Página →</span>
+  {% endif %}
+</div>
+

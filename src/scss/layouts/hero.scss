@@ -1,0 +1,79 @@
+.hero {
+    display: flex;
+    overflow: visible;
+    align-items: center;
+    position: relative;
+
+    &__content {
+        flex: 1 1 50%;
+        padding-right: 2rem;
+        z-index: 2;
+    }
+
+    &__img {
+        flex: 1 1 auto;
+        position: relative;
+
+        img {
+            display: block;
+            width: 120%;
+            margin-left: 10%;
+            max-width: none;
+        }
+    }
+
+    &__form {
+        position: absolute;
+        top: 50%; // Centraliza verticalmente
+        left: 50%; // Centraliza horizontalmente
+        transform: translate(-50%, -50%); // Garante centralização exata
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        width: 90%; // Largura responsiva
+        max-width: 400px;
+
+        label {
+            display: none;
+        }
+    }
+
+    // Responsividade
+    @media (max-width: 768px) {
+        flex-direction: column; // Texto e imagem em pilha
+
+        &__content {
+            flex: 1 1 auto;
+            padding: 1rem; // Reduz espaço lateral
+            text-align: center; // Centraliza o texto
+        }
+
+        &__img {
+            img {
+                width: 100%; // Ajusta a imagem ao tamanho da tela
+                margin-left: 0; // Remove margem lateral
+            }
+        }
+
+        &__form {
+            top: 50%; // Centralizado verticalmente
+            left: 50%; // Centralizado horizontalmente
+            transform: translate(-50%, -50%); // Mantém centralização
+            padding: 1.5rem; // Reduz padding para caber melhor
+            width: 80%; // Largura ajustada para telas menores
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__form {
+            padding: 1rem; // Padding reduzido em telas muito pequenas
+            width: 90%; // Quase a largura completa da tela
+        }
+
+        &__content {
+            font-size: 0.9rem; // Reduz tamanho da fonte
+        }
+    }
+}

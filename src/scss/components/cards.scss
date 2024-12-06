@@ -1,0 +1,13 @@
+// Blog Articles Cards
+.featured-articles {
+    &__list {
+        display: flex;
+        gap: 1.2em;
+        align-items: center;
+        justify-content: start;
+
+        li {
+            flex: 1 1;
+        }
+    }
+}
