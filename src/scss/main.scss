@@ -15,8 +15,8 @@
 @use './layouts/article.scss';
 @use './layouts/hero.scss';
 
-
-// Paginação teste *Tirar daqui
+// ! Colocar em um arquivo próprio como um componente !
+// Paginação teste
 .pagination {
     display: flex;
     gap: 10px;

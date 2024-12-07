@@ -65,11 +65,6 @@ p {
   margin: 0 auto;
   padding: 0 1em;
 }
-@media (min-width: 1250px) {
-  .container {
-    max-width: 2000px;
-  }
-}
 
 .article__image {
   height: 480px;
@@ -80,83 +75,69 @@ p {
   height: 100%;
 }
 
-/* Container principal da hero */
 .hero {
   display: flex;
-  justify-content: flex-start; /* Alinha os itens no início */
-  align-items: center; /* Alinha o conteúdo verticalmente */
-  position: relative; /* Necessário para o posicionamento da imagem */
-  width: 100%; /* Ocupa toda a largura da tela */
-  height: 100vh; /* Garante que ocupe toda a altura da tela */
-  overflow: hidden; /* Previne rolagem */
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
-
-/* Container do conteúdo da hero (texto e botão) */
-.hero-content {
-  max-width: 40%; /* Limita a largura máxima do conteúdo */
-  padding: 20px;
-  padding-right: 60px; /* Adiciona um espaçamento fixo entre o texto e a imagem */
-  z-index: 10; /* Garante que o texto fique sobre a imagem */
+.hero__content {
+  z-index: 10;
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  position: relative; /* Mantém o texto contido e não permite que ele invada a imagem */
-}
-
-.hero-content h1 {
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  padding: 10px 20px;
-  /* Estilos do botão */
-}
-
-/* Container da imagem da hero */
-.hero-image {
-  position: absolute; /* Posiciona a imagem de forma independente */
-  top: 0;
-  right: -40%; /* Faz a imagem transbordar para a direita */
-  height: 100%; /* Garante que a imagem ocupe toda a altura da tela */
-  width: 100vw; /* A imagem vai ocupar toda a largura da tela */
-  overflow: visible; /* Permite que a imagem transborde para a direita */
-}
-
-.hero-image img {
-  object-fit: cover; /* Faz a imagem cobrir todo o espaço */
-  height: 100%;
-  width: 100%; /* A imagem ocupa toda a largura da tela */
   position: relative;
 }
-
-/* Formulário posicionado sobre a imagem */
-.form-overlay {
-  position: absolute; /* Posiciona o formulário sobre a imagem */
-  top: 50%; /* Posiciona o formulário verticalmente no centro */
-  left: 50%; /* Posiciona o formulário horizontalmente no centro */
-  transform: translate(-10%, -50%); /* Ajusta o posicionamento para ficar realmente centralizado */
-  z-index: 15; /* Garante que o formulário fique acima da imagem */
-  background: rgba(255, 255, 255, 0.877); /* Fundo semi-transparente para melhorar a legibilidade */
-  padding: 30px;
-  border-radius: 8px; /* Bordas arredondadas */
-  width: 80%; /* Largura do formulário */
-  max-width: 500px; /* Largura máxima do formulário */
+.hero__content h1 {
+  margin-bottom: 10px;
+  max-width: 48%;
+}
+.hero__content p {
+  margin-bottom: 20px;
+  max-width: 48%;
+}
+.hero .cta-button {
+  padding: 10px 20px;
+}
+.hero__image {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  height: 100%;
+  width: 100vw;
+  overflow: visible;
+}
+.hero__image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-left: 1.5rem;
 }
 
-/* Estilo do formulário */
-.contact-form h2 {
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(15%, -70%);
+  z-index: 15;
+  background: rgba(255, 255, 255, 0.877);
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+.form__contact h2 {
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
 }
-
-.contact-form input,
-.contact-form textarea {
+.form__contact input,
+.form__contact textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -164,8 +145,7 @@ p {
   border-radius: 5px;
   font-size: 16px;
 }
-
-.contact-form button {
+.form__contact button {
   background-color: #007bff;
   color: white;
   padding: 12px 20px;
@@ -174,43 +154,38 @@ p {
   cursor: pointer;
   font-size: 16px;
 }
-
-.contact-form button:hover {
+.form__contact button:hover {
   background-color: #0056b3;
 }
 
-/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column; /* Coloca os itens em uma coluna */
-    height: auto; /* A altura não precisa ser fixada em telas pequenas */
+    flex-direction: column;
+    height: auto;
   }
-  .hero-content {
-    max-width: 100%; /* Faz o conteúdo ocupar toda a largura disponível */
-    padding-right: 20px; /* Ajusta o padding para telas pequenas */
-    padding-left: 20px; /* Adiciona algum padding à esquerda */
-    margin-bottom: 20px; /* Dá um pequeno espaço abaixo do conteúdo */
+  .hero__content {
+    max-width: 100%;
+    padding: 0 20px;
+    margin-bottom: 20px;
   }
-  .hero-image {
-    position: relative; /* Remove a posição absoluta em telas pequenas */
-    right: 0; /* Remove o transbordo da imagem */
-    width: 100%; /* A imagem ocupa toda a largura da tela */
-    height: auto; /* A altura da imagem é ajustada automaticamente */
+  .hero__image {
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: auto;
   }
-  .hero-image img {
-    object-fit: cover; /* Garante que a imagem cubra a tela de maneira adequada */
-    width: 100%; /* A imagem ocupa toda a largura da tela */
-    height: 300px; /* Ajuste a altura da imagem para telas menores */
+  .hero__image img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
   }
 }
-/* Responsividade para telas muito pequenas (ex: celulares em modo retrato) */
 @media (max-width: 480px) {
-  .hero-content {
-    padding-right: 10px; /* Reduz o padding para telas muito pequenas */
-    padding-left: 10px;
+  .hero__content {
+    padding: 0 10px;
   }
-  .hero-image img {
-    height: 200px; /* Ajuste adicional para telas muito pequenas */
+  .hero__image img {
+    height: 200px;
   }
 }
 .pagination {
