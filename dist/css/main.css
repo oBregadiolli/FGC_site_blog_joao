@@ -30,26 +30,61 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-
-.nav__left {
+.nav .nav__left {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
-.nav__list {
+.nav .nav__list {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 1rem;
 }
-
-.nav__right {
+.nav .nav__right {
   display: flex;
   gap: 0.5rem;
 }
+.nav .nav__hamburger {
+  display: none;
+}
+.nav .nav__hamburger .hamburger-btn {
+  display: block;
+}
+.nav .nav__hamburger .close-btn {
+  display: none;
+}
 
+@media screen and (max-width: 768px) {
+  .nav .nav__list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 100vh;
+    background-color: #fff;
+    width: 100%;
+    z-index: 18;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    padding-left: 1rem;
+  }
+  .nav .nav__hamburger {
+    display: block;
+  }
+  .nav .nav__hamburger .hamburger-btn {
+    display: block;
+  }
+  .nav .nav__hamburger .close-btn {
+    display: none;
+  }
+  .nav .nav__list.open {
+    display: flex;
+    padding: 1rem;
+  }
+}
 .featured-articles__list {
   display: flex;
   gap: 1.2em;
