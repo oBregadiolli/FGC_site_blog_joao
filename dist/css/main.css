@@ -119,45 +119,6 @@ p {
   margin-left: 1.5rem;
 }
 
-.form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(15%, -70%);
-  z-index: 15;
-  background: rgba(255, 255, 255, 0.877);
-  padding: 30px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 500px;
-}
-.form__contact h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: bold;
-}
-.form__contact input,
-.form__contact textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-.form__contact button {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-.form__contact button:hover {
-  background-color: #0056b3;
-}
-
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -180,12 +141,50 @@ p {
     height: 300px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 740px) {
   .hero__content {
     padding: 0 10px;
   }
   .hero__image img {
     height: 200px;
+  }
+  .hero__image {
+    position: relative;
+    /* Remove a posição absoluta para telas pequenas */
+    right: 0;
+    /* Remove o transbordo da imagem */
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura da tela */
+    height: auto;
+    /* A altura é ajustada automaticamente */
+  }
+  .hero__image img {
+    object-fit: cover;
+    /* Garante que a imagem cubra a tela adequadamente */
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura da tela */
+    height: 300px;
+    /* Ajusta a altura da imagem para telas menores */
+    margin-left: 0rem;
+  }
+  /* Responsividade para telas pequenas */
+}
+@media (max-width: 740px) and (max-width: 768px) {
+  .hero__image {
+    position: relative;
+    right: 0;
+    /* Remove o transbordo da imagem */
+    width: 100%;
+    /* A imagem ocupa toda a largura da tela */
+    height: 70vh;
+    /* A altura da imagem é ajustada automaticamente */
+    object-fit: cover;
+    /* Garante que a imagem cubra a tela adequadamente */
+    overflow: hidden;
+    /* Impede que o conteúdo transborde */
+  }
+  .hero__image img {
+    height: 100%;
   }
 }
 .pagination {
