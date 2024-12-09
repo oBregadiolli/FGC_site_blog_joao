@@ -1,0 +1,27 @@
+
+
+// * Our Services *
+.services {
+
+    &__nav,
+    &__included {
+        display: flex;
+    }
+}
+
+.services__cleaning li {
+    display: none;
+}
+
+.services__cleaning li:not([hidden]) {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+.view-more-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

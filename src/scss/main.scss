@@ -18,35 +18,9 @@
 @use './layouts/hero.scss';
 @use './layouts/testimonials.scss';
 @use './layouts/why.scss';
+@use './layouts/services.scss';
 
 
 
 
 // ! Colocar tudo em arquivos próprios como componentes !
-
-
-// * Our Services *
-.services {
-
-    &__nav,
-    &__included {
-        display: flex;
-    }
-}
-
-.services__cleaning li {
-    display: none;
-}
-
-.services__cleaning li:not([hidden]) {
-    display: block;
-}
-
-.hidden {
-    display: none;
-}
-.view-more-btn {
-    margin-top: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
