@@ -42,3 +42,8 @@ index.html // página inicial do blog
   post-2.md
   ...
 
+
+## Fazendo o build
+
+1. Rodar o script 'node api.js' // Para fazer o fetch da API Bubble e converter os arquivos para .md
+2. Rodar o script 'npm start' // Para fazer o build dos estáticos
