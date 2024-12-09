@@ -32,12 +32,14 @@ title: Flash Guys Cleaning | Los Angeles, CA
 </section>
 
 <!-- * Testimonials Section *> -->
-<!-- ! Descobrir como renderizar em estático com 11ty ! -->
+<!-- ! Descobrir como renderizar o conteúdo dinâmico .Json em estático com 11ty ! -->
 <section>
     <div class="container">
         <h2>What our clients say</h2>
         <button>Make a review</button>
-        <div id="testimonials-container"></div>
+        <div id="testimonials-container">
+            <!-- *Conteúdo dinâmico: 'assets/scripts/testimonialsData.js * -->
+        </div>
         <!-- Modal Overlay -->
         <div id="testimonial-modal" class="modal hidden">
             <div class="modal-content">
@@ -120,7 +122,7 @@ title: Flash Guys Cleaning | Los Angeles, CA
     </div>
 </section>
 
-<!-- * Services * -->
+<!-- * Our Services * -->
 <section class="container">
     <div>
         <!-- Navigation -->
@@ -164,7 +166,7 @@ title: Flash Guys Cleaning | Los Angeles, CA
         </ul>
         <!-- Included Services -->
         <ul role="list" class="services__included" id="included-services">
-            <!-- Dynamically generated items will appear here -->
+            <!-- * Conteúdo dinâmico: 'assets/scripts/services.js * -->
         </ul>
         <div>
             <button>Free estimate</button>
@@ -173,4 +175,109 @@ title: Flash Guys Cleaning | Los Angeles, CA
     </div>
 </section>
 
-<!-- *  * -->
+<!-- * Our Team * -->
+<section class="team">
+    <div class="container">
+        <h2>Our team</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro nobis omnis aliquam totam quod tempora
+            corrupti
+            maiores harum? Voluptate voluptas unde dicta asperiores earum numquam maiores error sit ipsa maxime!</p>
+        <!-- Setas de Navegação -->
+        <nav>
+            <ol>
+                <li>
+                    <button aria-label="Scroll Next">
+                        <span class="material-symbols-rounded">arrow_forward</span>
+                    </button>
+                </li>
+                <li>
+                    <button aria-label="Scroll Previous">
+                        <span class="material-symbols-rounded">arrow_back</span>
+                    </button>
+                </li>
+            </ol>
+        </nav>
+        <!-- Cleaner Cards List -->
+        <ul role="list" class="team__cards section-scroll-x">
+            <li role="article">
+                <article class="team__cards__item">
+                    <div class="team__cards__image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5t6OoXph6JhDQv-IuwQXS7GQc7v0pNiGzQ&s"
+                            alt="Cleaner Placeholder">
+                    </div>
+                    <div>
+                        <h3>Laura</h3>
+                        <span class="material-symbols-rounded">
+                            verified_user
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                    </div>
+                    <span>Professional Cleaner</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, natus! Esse eaque cumque
+                        blanditiis deleniti rerum quibusdam impedit eius, ipsum sequi voluptate delectus repellendus
+                        commodi aspernatur! Eum, cum officiis. Repudiandae.</p>
+                    <button>Keep reading</button>
+                </article>
+            </li>
+            <li role="article">
+                <article class="team__cards__item">
+                    <div class="team__cards__image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5t6OoXph6JhDQv-IuwQXS7GQc7v0pNiGzQ&s"
+                            alt="Cleaner Placeholder">
+                    </div>
+                    <div>
+                        <h3>Laura</h3>
+                        <span class="material-symbols-rounded">
+                            verified_user
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                    </div>
+                    <span>Professional Cleaner</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, natus! Esse eaque cumque
+                        blanditiis deleniti rerum quibusdam impedit eius, ipsum sequi voluptate delectus repellendus
+                        commodi aspernatur! Eum, cum officiis. Repudiandae.</p>
+                    <button>Keep reading</button>
+                </article>
+            </li>
+            <li role="article">
+                <article class="team__cards__item">
+                    <div class="team__cards__image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5t6OoXph6JhDQv-IuwQXS7GQc7v0pNiGzQ&s"
+                            alt="Cleaner Placeholder">
+                    </div>
+                    <div>
+                        <h3>Laura</h3>
+                        <span class="material-symbols-rounded">
+                            verified_user
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                        <span class="material-symbols-rounded">star</span>
+                    </div>
+                    <span>Professional Cleaner</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, natus! Esse eaque cumque
+                        blanditiis deleniti rerum quibusdam impedit eius, ipsum sequi voluptate delectus repellendus
+                        commodi aspernatur! Eum, cum officiis. Repudiandae.</p>
+                    <button>Keep reading</button>
+                </article>
+            </li>
+        </ul>
+
+    </div>
+</section>

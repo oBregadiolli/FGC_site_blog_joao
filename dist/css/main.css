@@ -403,4 +403,62 @@ p {
   cursor: pointer;
 }
 
+.team {
+  background-color: yellow;
+  padding: 48px 0;
+  width: 100%;
+}
+@media (max-width: 1117px) {
+  .team .team__cards {
+    justify-content: flex-start;
+  }
+}
+.team__cards {
+  /* Permite scroll horizontal */
+  overflow-x: auto;
+  /* Scroll suave */
+  scroll-behavior: smooth;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid tomato;
+  padding: 1rem;
+  /* Estiliza a barra de rolagem para uma aparência melhor */
+}
+.team__cards::-webkit-scrollbar {
+  height: 8px;
+}
+.team__cards::-webkit-scrollbar-thumb {
+  background: tomato;
+  border-radius: 4px;
+}
+.team__cards::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.team__cards__item {
+  max-width: 348px;
+  min-width: 340px;
+  border: 1px solid navy;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.4rem;
+  flex-shrink: 0;
+}
+.team__cards__image {
+  width: 48px;
+  height: 48px;
+  /* Certifique-se de que a altura é igual à largura */
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team__cards__image img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=main.css.map */
