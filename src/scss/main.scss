@@ -64,6 +64,7 @@
 #testimonials-container {
     display: flex;
     gap: 1em;
+    padding: 48px 0;
 }
 
 // Testimonial Card
@@ -75,9 +76,18 @@
     row-gap: 1rem;
     padding: 1.4rem 1.8rem;
 
-    &__header {
+    &__header,
+    &__header__initials {
         display: flex;
         align-items: center;
+
+        &__initials {
+            background-color: red;
+            min-width: 38px;
+            height: 38px;
+            border-radius: 100%;
+            justify-content: center;
+        }
 
         &__description {
             display: flex;
@@ -108,8 +118,42 @@
     div {
         flex: 1 1;
     }
+
     img {
         max-width: 100%;
         object-fit: cover;
     }
+}
+
+/* Modal Overlay Testimonials */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+    transition: opacity 0.3s ease;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.close-button {
+    display: none;
+}
+
+.modal-content {
+    background: white; /* Remove fundo branco */
+    padding: 0; /* Remove padding extra */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: none; /* Remove sombra */
+    position: relative;
 }

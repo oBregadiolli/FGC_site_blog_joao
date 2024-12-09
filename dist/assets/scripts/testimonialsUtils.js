@@ -1,5 +1,4 @@
-// Função para criar estrelas
-// Função para criar estrelas
+// Função para gerar estrelas
 export const createStars = (rating) => {
     return Array.from({ length: rating }, () => `
         <span class="material-symbols-rounded">star</span>
@@ -10,7 +9,7 @@ export const createStars = (rating) => {
 export const createTestimonialCard = (data) => `
     <article class="testimonials">
         <header class="testimonials__header">
-            <div>${data.name[0]}${data.name.split(" ")[1]?.[0] || ""}</div>
+            <div class="testimonials__header__initials"><span>${data.name[0]}${data.name.split(" ")[1]?.[0] || ""}<span></div>
             <div class="testimonials__header-wrapper">
                 <div class="testimonials__header__name-rate">
                     <h2>${data.name}</h2>
@@ -26,7 +25,7 @@ export const createTestimonialCard = (data) => `
         ${
             data.pictures?.length
                 ? `<div class="testimonials__pictures">
-                        ${data.pictures.map(pic => `<div><img src="${pic}" alt="Testimonial picture"></div>`).join("")}
+                        ${data.pictures.map(pic => `<div class="testimonials__pictures__item"><img src="${pic}" alt="Testimonial picture"></div>`).join("")}
                    </div>`
                 : ""
         }
