@@ -1,0 +1,20 @@
+// Accordions
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.accordion-item.open .accordion-content {
+    max-height: 200px; /* Ajuste conforme o conteúdo */
+}
+.accordion-item.open .accordion-icon {
+    content: "-";
+}

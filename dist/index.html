@@ -154,11 +154,65 @@
                     <button>Learn more</button>
                 </div>
             </li>
+            <div>
+                <button>Free estimate</button>
+                <button>Book now</button>
+            </div>
         </ul>
+
         <!-- Carousel -->
         <div class="why__content__carousel">
             <img src="./assets/images/blog/img-1.jpg" alt="Placeholder Image" width="100%">
         </div>
+    </div>
+</section>
+
+<!-- * Services * -->
+<section class="container">
+    <div>
+        <!-- Navigation -->
+        <nav class="services">
+            <ul role="menuitem" class="services__nav">
+                <li><button data-service="deep-cleaning">Deep Cleaning</button></li>
+                <li><button data-service="carpet-cleaning">Carpet Cleaning</button></li>
+                <li><button data-service="window-cleaning">Window Cleaning</button></li>
+                <li><button data-service="office-cleaning">Office Cleaning</button></li>
+            </ul>
+        </nav>
+        <!-- Cleaning Type -->
+        <ul role="article" class="services__cleaning">
+            <li data-service="deep-cleaning">
+                <article>
+                    <h3>Deep Cleaning</h3>
+                    <p>Deep cleaning involves a thorough cleaning of all surfaces, corners, and hard-to-reach areas.
+                        Ideal for a fresh start.</p>
+                </article>
+            </li>
+            <li data-service="carpet-cleaning" hidden>
+                <article>
+                    <h3>Carpet Cleaning</h3>
+                    <p>Carpet cleaning includes vacuuming, spot treatment, and steam cleaning to remove dirt and stains
+                        effectively.</p>
+                </article>
+            </li>
+            <li data-service="window-cleaning" hidden>
+                <article>
+                    <h3>Window Cleaning</h3>
+                    <p>Window cleaning ensures streak-free and sparkling windows, both inside and out.</p>
+                </article>
+            </li>
+            <li data-service="office-cleaning" hidden>
+                <article>
+                    <h3>Office Cleaning</h3>
+                    <p>Office cleaning includes sanitizing desks, cleaning common areas, and removing trash efficiently.
+                    </p>
+                </article>
+            </li>
+        </ul>
+        <!-- Included Services -->
+        <ul role="list" class="services__included" id="included-services">
+            <!-- Dynamically generated items will appear here -->
+        </ul>
     </div>
 </section>
     </main>
@@ -168,6 +222,8 @@
 <!-- Menu Nav -->
 <script src="/assets/scripts/menu-nav.js"></script>
 <script src="/assets/scripts/accordion.js"></script>
+<script src="/assets/scripts/services.js"></script>
+<script src="/assets/scripts/included.json"></script>
 <!-- Testimonials -->
 <script type="module" src="/assets/scripts/main.js"></script>
 </html>

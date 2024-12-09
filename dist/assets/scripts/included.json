@@ -1,0 +1,22 @@
+{
+    "deep-cleaning": [
+        "Dusting",
+        "Mopping",
+        "Disinfecting surfaces"
+    ],
+    "carpet-cleaning": [
+        "Vacuuming",
+        "Spot treatment",
+        "Steam cleaning"
+    ],
+    "window-cleaning": [
+        "Interior window washing",
+        "Exterior window washing",
+        "Streak-free finish"
+    ],
+    "office-cleaning": [
+        "Desk sanitizing",
+        "Trash removal",
+        "Common area cleaning"
+    ]
+}

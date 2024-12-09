@@ -1,0 +1,11 @@
+// * Why Choose Us
+.why {
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        &__accordions, &__carousel {
+            flex: 1 1;
+        }
+    }
+}

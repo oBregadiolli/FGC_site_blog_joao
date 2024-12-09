@@ -9,188 +9,44 @@
 // Componentes
 @use './components/nav.scss';
 @use './components/cards.scss';
+@use './components/accordion.scss';
+@use './components/pagination.scss';
 
 // Layouts
 @use './layouts/globals.scss';
 @use './layouts/article.scss';
 @use './layouts/hero.scss';
+@use './layouts/testimonials.scss';
+@use './layouts/why.scss';
 
 
 
 
 // ! Colocar tudo em arquivos próprios como componentes !
-// Paginação teste
-.pagination {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-
-    a {
-        text-decoration: none;
-        padding: 5px 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        color: #007acc;
-
-        &:hover {
-            background-color: #f0f0f0;
-        }
-    }
-
-    .current-page {
-        padding: 5px 10px;
-        border: 2px solid #007acc;
-        /* Borda mais grossa para destaque */
-        border-radius: 4px;
-        background-color: #007acc;
-        color: #fff;
-        font-weight: bold;
-        /* Deixa o número em negrito */
-        cursor: default;
-        /* Remove a interatividade */
-    }
-
-    .disabled {
-        padding: 5px 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        background-color: #f9f9f9;
-        color: #aaa;
-        cursor: not-allowed;
-    }
-}
 
 
-#testimonials-container {
-    display: flex;
-    gap: 1em;
-    padding: 48px 0;
-}
+// * Our Services *
+.services {
 
-// Testimonial Card
-.testimonials {
-    max-width: 400px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    padding: 1.4rem 1.8rem;
-
-    &__header,
-    &__header__initials {
+    &__nav,
+    &__included {
         display: flex;
-        align-items: center;
-
-        &__initials {
-            background-color: red;
-            min-width: 38px;
-            height: 38px;
-            border-radius: 100%;
-            justify-content: center;
-        }
-
-        &__description {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
     }
 }
 
-.testimonials__header-wrapper,
-.testimonials__reply__logo {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    margin-left: 1.2rem;
-
-}
-
-.testimonials__reply__logo {
-    margin-left: 0rem;
-}
-
-.testimonials__pictures {
-    display: flex;
-    gap: .4rem;
-
-    div {
-        flex: 1 1;
-    }
-
-    img {
-        max-width: 100%;
-        object-fit: cover;
-    }
-}
-
-/* Modal Overlay Testimonials */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    overflow: auto;
-    transition: opacity 0.3s ease;
-}
-
-.modal.hidden {
+.services__cleaning li {
     display: none;
 }
 
-.close-button {
+.services__cleaning li:not([hidden]) {
+    display: block;
+}
+
+.hidden {
     display: none;
 }
-
-.modal-content {
-    background: white;
-    /* Remove fundo branco */
-    padding: 0;
-    /* Remove padding extra */
-    border-radius: 0;
-    /* Remove bordas arredondadas */
-    box-shadow: none;
-    /* Remove sombra */
-    position: relative;
-}
-
-// * Why Choose Us
-.why {
-    &__content {
-        display: flex;
-        align-items: flex-start;
-        gap: 2rem;
-        &__accordions, &__carousel {
-            flex: 1 1;
-        }
-    }
-}
-
-// Accordions
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-.accordion-title {
-    display: flex;
-    justify-content: space-between;
+.view-more-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
     cursor: pointer;
-    padding: 10px;
-    background-color: #f1f1f1;
-}
-
-.accordion-item.open .accordion-content {
-    max-height: 200px; /* Ajuste conforme o conteúdo */
-}
-.accordion-item.open .accordion-icon {
-    content: "-";
 }
