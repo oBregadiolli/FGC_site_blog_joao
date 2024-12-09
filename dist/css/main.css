@@ -258,4 +258,52 @@ p {
   cursor: not-allowed;
 }
 
+#testimonials-container {
+  display: flex;
+  gap: 1em;
+}
+
+.testimonials {
+  max-width: 400px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 1.4rem 1.8rem;
+}
+.testimonials__header {
+  display: flex;
+  align-items: center;
+}
+.testimonials__header__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.testimonials__header-wrapper,
+.testimonials__reply__logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 1.2rem;
+}
+
+.testimonials__reply__logo {
+  margin-left: 0rem;
+}
+
+.testimonials__pictures {
+  display: flex;
+  gap: 0.4rem;
+}
+.testimonials__pictures div {
+  flex: 1 1;
+}
+.testimonials__pictures img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=main.css.map */

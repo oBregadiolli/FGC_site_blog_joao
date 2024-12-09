@@ -1,0 +1,35 @@
+<article class="testimonials">
+  <header class="testimonials__header">
+      <div>{{ initials }}</div>
+      <div class="testimonials__header-wrapper">
+          <div class="testimonials__header__name-rate">
+              <h2>{{ name }}</h2>
+              <div>
+                  {{ "★" | repeat(rating) | safe }}
+                  {{ "☆" | repeat(5 - rating) | safe }}
+              </div>
+          </div>
+          <div class="testimonials__header__description">
+              <span>{{ date }}</span>
+              <span>{{ description }}</span>
+          </div>
+      </div>
+  </header>
+  <p>{{ comment }}</p>
+  <div class="testimonials__pictures">
+      {% for img in images %}
+      <div><img src="{{ img }}" alt="Testimonial Image"></div>
+      {% endfor %}
+  </div>
+  <div class="testimonials__reply">
+      <div class="testimonials__reply__logo">
+          <img src="{{ reply.logo }}" alt="Reply Logo" width="32px">
+          <div>
+              <span class="material-symbols-rounded">reply</span>
+              <span>Answered</span>
+          </div>
+      </div>
+      <p>{{ reply.text }}</p>
+      <button>Read more</button>
+  </div>
+</article>

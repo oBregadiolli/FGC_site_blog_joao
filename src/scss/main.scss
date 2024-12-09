@@ -15,7 +15,10 @@
 @use './layouts/article.scss';
 @use './layouts/hero.scss';
 
-// ! Colocar em um arquivo próprio como um componente !
+
+
+
+// ! Colocar tudo em arquivos próprios como componentes !
 // Paginação teste
 .pagination {
     display: flex;
@@ -54,5 +57,59 @@
         background-color: #f9f9f9;
         color: #aaa;
         cursor: not-allowed;
+    }
+}
+
+
+#testimonials-container {
+    display: flex;
+    gap: 1em;
+}
+
+// Testimonial Card
+.testimonials {
+    max-width: 400px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1.4rem 1.8rem;
+
+    &__header {
+        display: flex;
+        align-items: center;
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+}
+
+.testimonials__header-wrapper,
+.testimonials__reply__logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 1.2rem;
+
+}
+
+.testimonials__reply__logo {
+    margin-left: 0rem;
+}
+
+.testimonials__pictures {
+    display: flex;
+    gap: .4rem;
+
+    div {
+        flex: 1 1;
+    }
+    img {
+        max-width: 100%;
+        object-fit: cover;
     }
 }
