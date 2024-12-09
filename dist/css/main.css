@@ -461,4 +461,18 @@ p {
   object-fit: cover;
 }
 
+.section-scroll {
+  display: none;
+}
+@media (max-width: 1117px) {
+  .section-scroll {
+    display: flex;
+  }
+}
+.section-scroll-items {
+  display: flex;
+  list-style: none;
+  gap: 0.4rem;
+}
+
 /*# sourceMappingURL=main.css.map */

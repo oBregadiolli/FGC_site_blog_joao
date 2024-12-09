@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Seleciona o contêiner que terá o scroll horizontal
-    const scrollContainer = document.querySelector(".team__cards");
+    const scrollContainer = document.querySelector(".section-scroll-x");
 
     // Seleciona os botões de navegação
     const nextButton = document.querySelector('button[aria-label="Scroll Next"]');
