@@ -130,7 +130,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    
+
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -151,9 +151,46 @@
 }
 
 .modal-content {
-    background: white; /* Remove fundo branco */
-    padding: 0; /* Remove padding extra */
-    border-radius: 0; /* Remove bordas arredondadas */
-    box-shadow: none; /* Remove sombra */
+    background: white;
+    /* Remove fundo branco */
+    padding: 0;
+    /* Remove padding extra */
+    border-radius: 0;
+    /* Remove bordas arredondadas */
+    box-shadow: none;
+    /* Remove sombra */
     position: relative;
+}
+
+// * Why Choose Us
+.why {
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        &__accordions, &__carousel {
+            flex: 1 1;
+        }
+    }
+}
+
+// Accordions
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.accordion-item.open .accordion-content {
+    max-height: 200px; /* Ajuste conforme o conteúdo */
+}
+.accordion-item.open .accordion-icon {
+    content: "-";
 }
