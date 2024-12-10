@@ -2,6 +2,7 @@
 layout: layouts/base.html
 title: Post de Exemplo 6
 description: A descrição do meu post vai aqui
+image: /assets/images/blog/img-1.jpg
 date: 2024-12-06
 author: Ana Florentino
 categories:

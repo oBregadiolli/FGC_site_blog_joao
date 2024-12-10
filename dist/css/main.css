@@ -540,5 +540,24 @@ p {
     gap: 0.5rem; /* Ajusta o espaçamento nas colunas */
   }
 }
+.articles ol {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-start;
+}
+.articles ol li {
+  flex: 1;
+}
+.articles ol img {
+  width: 100%;
+}
+
+.pagination-links__list {
+  display: flex;
+  align-items: baseline;
+  list-style: none;
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -182,4 +182,26 @@
     }
 }
 
-  
+// All articles
+.articles ol {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-start;
+    li {
+        flex: 1;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+// Pagination links (usar seletores avançados para first/last child**
+.pagination-links {
+    &__list {
+        display: flex;
+        align-items: baseline;
+        list-style: none;
+    }
+}

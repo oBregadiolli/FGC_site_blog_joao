@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog</title>
+<title>Latest posts</title>
 <link rel="stylesheet" href="/css/main.css">
 
 <!-- Material Icons Rounded -->
@@ -51,41 +51,151 @@
     </header>
     <main>
         
-<div class="featured-container container">
+
+<div class="container">
+<nav class="pagination-links">
+  <ol class="pagination-links__list">
+    <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+    <li class="pagination-links__list__item"><a href="#">Blog</a></li>
+  </ol>
+</nav>
+<h1>Latest posts</h1>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cum distinctio earum, libero similique rerum assumenda eius esse sit impedit quae cumque, laborum ratione hic! Nam animi nesciunt excepturi dicta.</p>
+
+<!-- Featured Articles -->
+<div class="featured-container">
   <div class="column left">
     <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Imagem 1" />
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
     </div>
   </div>
   <div class="column right">
     <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Imagem 2" />
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
     </div>
     <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Imagem 3" />
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
     </div>
   </div>
 </div>
 
+<!-- Read All Articles -->
+ <section>
+  <h2>All articles</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita, dignissimos mollitia, illum qui, eos provident repellendus laborum alias atque delectus dolores neque accusantium maxime eligendi obcaecati repudiandae. Quasi, minima!</p>
+  <button>View all</button>
+  <div class="articles">
+  <ol role="list" class="articles__list">
+    <li role="article">
+      <article class="articles__list__item">
+        <div>
+          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
+        </div>
+        <h3>Article Title</h3>
+        <span>Categorie</span>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
+        <span>Dec 10, 2024</span>
+      </article>
+    </li>
+    <li role="article">
+      <article class="articles__list__item">
+        <div>
+          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
+        </div>
+        <h3>Article Title</h3>
+        <span>Categorie</span>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
+        <span>Dec 10, 2024</span>
+      </article>
+    </li>
+    <li role="article">
+      <article class="articles__list__item">
+        <div>
+          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
+        </div>
+        <h3>Article Title</h3>
+        <span>Categorie</span>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
+        <span>Dec 10, 2024</span>
+      </article>
+    </li>
+    <li role="article">
+      <article class="articles__list__item">
+        <div>
+          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
+        </div>
+        <h3>Article Title</h3>
+        <span>Categorie</span>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
+        <span>Dec 10, 2024</span>
+      </article>
+    </li>
+  </ol>
+</div>
+ </section>
 
-<h1>Blog</h1>
 
-<!-- Loop de Conteúdo de Todos os Posts do Site -->
-<ol>
+<!-- * Loop de Conteúdo de Todos os Posts do Site * -->
+<section class="articles">
+  <h2>All articles</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi facilis mollitia, earum porro veniam consequuntur eos et, eaque consequatur sit veritatis corporis placeat at excepturi iusto ipsum. Molestias, cumque.</p>
+  <button>View all</button>
+  <ol role="list" class="articles__list">
     
-    <li>
-        <a href="/blog/posts/post-2/">Post de Exemplo 2</a>
-    </li>
-    
-    <li>
-        <a href="/blog/posts/post-3/">Post de Exemplo 3</a>
-    </li>
-    
-    <li>
-        <a href="/blog/posts/post-4/">Post de Exemplo 4</a>
-    </li>
-    
-</ol>
+      <li role="article" class="articles__list__item">
+        <a href="/blog/posts/post-3/">
+        <article>
+          <div>
+            <img src="/assets/images/blog/img-1.jpg" alt="">
+          </div>
+          <h3>Post de Exemplo 3</h3>
+          <span>Tutorials,Tips and Tricks</span>
+          <p>A descrição do meu post vai aqui</p>
+        </article>
+      </a>
+      </li>
+      
+      <li role="article" class="articles__list__item">
+        <a href="/blog/posts/post-4/">
+        <article>
+          <div>
+            <img src="/assets/images/blog/img-1.jpg" alt="">
+          </div>
+          <h3>Post de Exemplo 4</h3>
+          <span>Tutorials,Tips and Tricks</span>
+          <p>A descrição do meu post vai aqui</p>
+        </article>
+      </a>
+      </li>
+      
+      <li role="article" class="articles__list__item">
+        <a href="/blog/posts/post-5/">
+        <article>
+          <div>
+            <img src="/assets/images/blog/img-1.jpg" alt="">
+          </div>
+          <h3>Post de Exemplo 5</h3>
+          <span>Tutorials,Tips and Tricks</span>
+          <p>A descrição do meu post vai aqui</p>
+        </article>
+      </a>
+      </li>
+      
+      <li role="article" class="articles__list__item">
+        <a href="/blog/posts/post-6/">
+        <article>
+          <div>
+            <img src="/assets/images/blog/img-1.jpg" alt="">
+          </div>
+          <h3>Post de Exemplo 6</h3>
+          <span>Tutorials,Tips and Tricks</span>
+          <p>A descrição do meu post vai aqui</p>
+        </article>
+      </a>
+      </li>
+      
+  </ol>
+</section>
 
 <!-- Paginação funcionando! -->
 <div class="pagination">
@@ -104,17 +214,13 @@
       <a href="/blog/page/2/">2</a>
     
   
-    
-      <a href="/blog/page/3/">3</a>
-    
-  
 
   <!-- Link para próxima página -->
   
-    <a href="/blog/page/3/" class="enabled">Próxima Página →</a>
+    <span class="disabled">Próxima Página →</span>
   
 </div>
-
+</div>
 
     </main>
 </body>
