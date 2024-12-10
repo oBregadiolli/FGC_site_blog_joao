@@ -19,8 +19,9 @@ title: Latest posts
 <h1>{{ title }}</h1>
 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cum distinctio earum, libero similique rerum assumenda eius esse sit impedit quae cumque, laborum ratione hic! Nam animi nesciunt excepturi dicta.</p>
 
-<!-- Featured Articles -->
+<!--! Featured Articles -- Adicionar loop !-->
 <div class="featured-container">
+  {% for post in paginatedPosts %}
   <div class="column left">
     <div class="image-container">
       <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
@@ -34,70 +35,18 @@ title: Latest posts
       <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
     </div>
   </div>
+  {% endfor %}
 </div>
 
-<!-- Read All Articles -->
- <section>
-  <h2>All articles</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita, dignissimos mollitia, illum qui, eos provident repellendus laborum alias atque delectus dolores neque accusantium maxime eligendi obcaecati repudiandae. Quasi, minima!</p>
-  <button>View all</button>
-  <div class="articles">
-  <ol role="list" class="articles__list">
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-  </ol>
-</div>
- </section>
 
-
-<!-- * Loop de Conteúdo de Todos os Posts do Site * -->
+<!-- Ler todos os artigos -->
 <section class="articles">
   <h2>All articles</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi facilis mollitia, earum porro veniam consequuntur eos et, eaque consequatur sit veritatis corporis placeat at excepturi iusto ipsum. Molestias, cumque.</p>
   <button>View all</button>
   <ol role="list" class="articles__list">
+    
+    <!-- * Loop de Conteúdo de Todos os Posts do Site * -->
     {% for post in paginatedPosts %}
       <li role="article" class="articles__list__item">
         <a href="{{  post.url }}">
@@ -112,7 +61,8 @@ title: Latest posts
       </a>
       </li>
       {% endfor %}
-  </ol>
+  
+    </ol>
 </section>
 
 <!-- Paginação funcionando! -->

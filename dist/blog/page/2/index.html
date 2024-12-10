@@ -33,8 +33,27 @@
             </ul>
         </div>
         <div class="nav__right">
+            <button>Book now</button>
             <button>Login</button>
             <button>Sign up</button>
+            <button>Dashboard</button>
+            <!-- User's Profile Menu -->
+            <button id="profile-picture">
+                <img src="/assets/images/blog/img-1.jpg" alt="Placeholder" width="48px">
+            </button>
+            <!-- Profile Dropdown -->
+            <div class="profile__dropdown">
+                <ul role="list">
+                    <header>
+                        <li role="listitem">Ana Florentino</li>
+                        <li role="listitem">abmflorentino@gmail.com</li>
+                    </header>
+                    <li role="link"><a href="#">Cleanings</a></li>
+                    <li role="link"><a href="#">Subscription Plan <span>Weekly</span></a></li>
+                    <li role="link"><a href="#">Feedbacks</a></li>
+                    <li role="link"><a href="#"><button>Logout</button></a></li>
+                </ul>
+            </div>
             <div class="nav__hamburger">
                 <!-- Ícone de hambúrguer -->
                 <button class="hamburger-btn">
@@ -62,8 +81,9 @@
 <h1>Latest posts</h1>
 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cum distinctio earum, libero similique rerum assumenda eius esse sit impedit quae cumque, laborum ratione hic! Nam animi nesciunt excepturi dicta.</p>
 
-<!-- Featured Articles -->
+<!--! Featured Articles -- Adicionar loop !-->
 <div class="featured-container">
+  
   <div class="column left">
     <div class="image-container">
       <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
@@ -77,70 +97,60 @@
       <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
     </div>
   </div>
+  
+  <div class="column left">
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
+    </div>
+  </div>
+  <div class="column right">
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
+    </div>
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
+    </div>
+  </div>
+  
+  <div class="column left">
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
+    </div>
+  </div>
+  <div class="column right">
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
+    </div>
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
+    </div>
+  </div>
+  
+  <div class="column left">
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
+    </div>
+  </div>
+  <div class="column right">
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
+    </div>
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
+    </div>
+  </div>
+  
 </div>
 
-<!-- Read All Articles -->
- <section>
-  <h2>All articles</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita, dignissimos mollitia, illum qui, eos provident repellendus laborum alias atque delectus dolores neque accusantium maxime eligendi obcaecati repudiandae. Quasi, minima!</p>
-  <button>View all</button>
-  <div class="articles">
-  <ol role="list" class="articles__list">
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-  </ol>
-</div>
- </section>
 
-
-<!-- * Loop de Conteúdo de Todos os Posts do Site * -->
+<!-- Ler todos os artigos -->
 <section class="articles">
   <h2>All articles</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi facilis mollitia, earum porro veniam consequuntur eos et, eaque consequatur sit veritatis corporis placeat at excepturi iusto ipsum. Molestias, cumque.</p>
   <button>View all</button>
   <ol role="list" class="articles__list">
+    
+    <!-- * Loop de Conteúdo de Todos os Posts do Site * -->
     
       <li role="article" class="articles__list__item">
         <a href="/blog/posts/post-3/">
@@ -194,7 +204,8 @@
       </a>
       </li>
       
-  </ol>
+  
+    </ol>
 </section>
 
 <!-- Paginação funcionando! -->
