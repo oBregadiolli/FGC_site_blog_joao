@@ -43,7 +43,8 @@ index.html // página inicial do blog
   ...
 
 
-## Fazendo o build
+## Scripts disponíveis
+$ npm start // SASS + 11ty + API Fetch
 
-1. Rodar o script 'node api.js' // Para fazer o fetch da API Bubble e converter os arquivos para .md
-2. Rodar o script 'npm start' // Para fazer o build dos estáticos
+## Workflow de Desenvolvimento:
+Crie primeiro em hard coding (HTML e estilos) e depois separe em templates com conteúdos dinâmicos

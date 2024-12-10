@@ -8,9 +8,26 @@ layout: layouts/base.html
 title: Blog
 ---
 
+<div class="featured-container container">
+  <div class="column left">
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Imagem 1" />
+    </div>
+  </div>
+  <div class="column right">
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Imagem 2" />
+    </div>
+    <div class="image-container">
+      <img src="/assets/images/blog/img-1.jpg" alt="Imagem 3" />
+    </div>
+  </div>
+</div>
+
+
 <h1>{{ title }}</h1>
 
-<!-- Lista de Todos os Posts do Site -->
+<!-- Loop de Conteúdo de Todos os Posts do Site -->
 <ol>
     {% for post in paginatedPosts %}
     <li>
