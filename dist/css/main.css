@@ -652,4 +652,23 @@ p {
   text-align: center;
 }
 
+.extreme {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.extreme__image, .extreme__content {
+  flex: 1 1;
+}
+.extreme__list {
+  display: flex;
+  flex-direction: column;
+}
+.extreme__list__item {
+  display: flex;
+  gap: 0.2rem;
+}
+
 /*# sourceMappingURL=main.css.map */
