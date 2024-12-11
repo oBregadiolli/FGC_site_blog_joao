@@ -1,7 +1,7 @@
 // Função para gerar estrelas
 export const createStars = (rating) => {
     return Array.from({ length: rating }, () => `
-        <span class="material-symbols-rounded">star</span>
+        <span class="material-symbols-rounded fill">star</span>
     `).join("");
 };
 
@@ -13,7 +13,7 @@ export const createTestimonialCard = (data) => `
             <div class="testimonials__header-wrapper">
                 <div class="testimonials__header__name-rate">
                     <h2>${data.name}</h2>
-                    <div>${createStars(data.rating)}</div>
+                    <div class="testimonials__header--rating">${createStars(data.rating)}</div>
                 </div>
                 <div class="testimonials__header__description">
                     <span>${data.date}</span>

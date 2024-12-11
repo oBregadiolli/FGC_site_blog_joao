@@ -14,6 +14,12 @@
     row-gap: 1rem;
     padding: 1.4rem 1.8rem;
 
+    &__header {
+        &--rating {
+            display: inline-flex;
+        }
+    }
+
     &__header,
     &__header__initials {
         display: flex;
