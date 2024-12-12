@@ -279,17 +279,27 @@
             position: relative;
             width: max-content;
             transition: all 0.3s ease;
+            .save {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
         }
     }
 }
 
 /* Container do conteúdo do cupom */
 .coupon-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     position: relative;
     padding: 20px;
+    gap: .4rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: white;
+    height: 300px;
     transition: opacity 0.3s ease;
     overflow: hidden;
 }
@@ -337,4 +347,17 @@
 /* Estilos adicionais do botão */
 .coupon-btn:hover {
     background-color: #e68900;
+}
+
+
+//* Featured Articles
+.featured {
+    &__list {
+        display: flex;
+        gap: 1rem;
+
+        &__tem {
+            flex: 1 1;
+        }
+    }
 }

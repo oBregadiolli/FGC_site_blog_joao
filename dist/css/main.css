@@ -703,14 +703,24 @@ p {
   width: max-content;
   transition: all 0.3s ease;
 }
+.promotions__list__item .save, .coupons__list__item .save {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 /* Container do conteúdo do cupom */
 .coupon-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding: 20px;
+  gap: 0.4rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: white;
+  height: 300px;
   transition: opacity 0.3s ease;
   overflow: hidden;
 }
@@ -758,6 +768,14 @@ p {
 /* Estilos adicionais do botão */
 .coupon-btn:hover {
   background-color: #e68900;
+}
+
+.featured__list {
+  display: flex;
+  gap: 1rem;
+}
+.featured__list__tem {
+  flex: 1 1;
 }
 
 /*# sourceMappingURL=main.css.map */
