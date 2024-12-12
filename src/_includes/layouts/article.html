@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "basehead.html" %}
+    {%block head %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        {% include "header.html" %}
+    </header>
+    <main class="container">
+        {{ content | safe }}
+    </main>
+</body>

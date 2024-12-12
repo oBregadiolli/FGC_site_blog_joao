@@ -34,54 +34,56 @@
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </div>
+
         <div class="nav__right">
-            <button>Book now</button>
-            <button>Login</button>
-            <button>Sign up</button>
-            <button>Dashboard</button>
-            <!-- User's Profile Menu -->
-            <button class="profile-picture">
-                <img src="/assets/images/blog/img-1.jpg" alt="Placeholder" width="48px">
-            </button>
-            <!-- Profile Dropdown -->
-            <div class="profile__dropdown">
-                <ul role="list">
-                    <header>
-                        <li role="listitem">
-                            <div class="profile-picture"><img src="/assets/images/blog/img-1.jpg" alt="Placeholder"
-                                    width="48px"></div>
-                        </li>
-                        <div>
-                            <li role="listitem">Ana Florentino</li>
-                            <li role="listitem">abmflorentino@gmail.com</li>
-                        </div>
-                    </header>
-                    <div>
-                        <li role="link"><a href="#">Profile</a></li>
-                        <li role="link"><a href="#">Subscription <span>Weekly</span></a></li>
-                        <li role="link"><a href="#">Cleanings</a></li>
-                    </div>
-                    <div>
-                        <li role="link"><a href="#">Help</a></li>
-                        <li role="link"><a href="#"><button>Logout</button></a></li>
-                    </div>
-                </ul>
+            <!-- Botões de login e signup -->
+            <button class="book-now">Book now</button>
+            <button class="dashboard hide">Dashboard</button>
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign up</button>
+
+            <!-- ? Profile Dropdown ? -->
+            <div class="nav__picture hide" id="profile-picture">
+                <img src="/assets/images/blog/img-1.jpg" alt="Placeholder">
             </div>
+            <!-- Profile Dropdown -->
+            <div class="nav__dropdown hide" id="profile-dropdown">
+                <div class="nav__dropdown__menu">
+                    <div class="user-info">
+                        <div class="nav__picture">
+                            <img src="/assets/images/blog/img-1.jpg" alt="Placeholder">
+                        </div>
+                        <h2>Ana Florentino</h2>
+                        <p>abmflorentino@gmail.com</p>
+                    </div>
+                    <div class="user-actions">
+                        <ul>
+                            <li><a href="#">Cleanings</a></li>
+                            <li><a href="#">Profile</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões do hambúrguer -->
             <div class="nav__hamburger">
-                <!-- Ícone de hambúrguer -->
                 <button class="hamburger-btn">
-                    <span class="material-symbols-rounded">menu</span>
+                    <span class="material-symbols-rounded">menu</span> <!-- Ícone do hambúrguer -->
                 </button>
-                <!-- Ícone de fechar (X) -->
-                <button class="close-btn">
-                    <span class="material-symbols-rounded">close</span>
+                <button class="close-btn hide">
+                    <span class="material-symbols-rounded">close</span> <!-- Ícone de fechar -->
                 </button>
             </div>
         </div>
     </div>
 </nav>
+
     </header>
-    <main>
+    <main class="container">
         <h2>My Content 1</h2>
 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 <h2>My Content</h2>
@@ -91,18 +93,3 @@
 
     </main>
 </body>
-
-<!--* Scripts *-->
-<!-- Menu Nav -->
-<script src="/assets/scripts/menu-nav.js"></script>
-<script src="/assets/scripts/accordion.js"></script>
-<script src="/assets/scripts/services.js"></script>
-<script src="/assets/scripts/scroll-x.js"></script>
-<script src="/assets/scripts/included.json"></script>
-<!-- Shoelace -->
-<script type="module"
-src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
-<!-- Testimonials -->
-<script type="module" src="/assets/scripts/main.js"></script>
-
-</html>

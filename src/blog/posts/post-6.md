@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.html
+layout: layouts/article.html
 title: Post de Exemplo 6
 description: A descrição do meu post vai aqui
 image: /assets/images/blog/img-1.jpg

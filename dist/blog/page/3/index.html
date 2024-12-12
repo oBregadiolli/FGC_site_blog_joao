@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog</title>
+<title>Latest posts</title>
 <link rel="stylesheet" href="/css/main.css">
 
-<!-- Material Icons Rounded -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=swap">
+<!-- Material Symbols Rounded -->
+<!-- ! Trocar por svg embedados para otimizar performance ! -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <!-- Shoelace Library -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
     
@@ -32,29 +34,71 @@
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </div>
+
         <div class="nav__right">
-            <button>Login</button>
-            <button>Sign up</button>
+            <!-- Botões de login e signup -->
+            <button class="book-now">Book now</button>
+            <button class="dashboard hide">Dashboard</button>
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign up</button>
+
+            <!-- ? Profile Dropdown ? -->
+            <div class="nav__picture hide" id="profile-picture">
+                <img src="/assets/images/blog/img-1.jpg" alt="Placeholder">
+            </div>
+            <!-- Profile Dropdown -->
+            <div class="nav__dropdown hide" id="profile-dropdown">
+                <div class="nav__dropdown__menu">
+                    <div class="user-info">
+                        <div class="nav__picture">
+                            <img src="/assets/images/blog/img-1.jpg" alt="Placeholder">
+                        </div>
+                        <h2>Ana Florentino</h2>
+                        <p>abmflorentino@gmail.com</p>
+                    </div>
+                    <div class="user-actions">
+                        <ul>
+                            <li><a href="#">Cleanings</a></li>
+                            <li><a href="#">Profile</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões do hambúrguer -->
             <div class="nav__hamburger">
-                <!-- Ícone de hambúrguer -->
                 <button class="hamburger-btn">
-                    <span class="material-symbols-rounded">menu</span>
+                    <span class="material-symbols-rounded">menu</span> <!-- Ícone do hambúrguer -->
                 </button>
-                <!-- Ícone de fechar (X) -->
-                <button class="close-btn">
-                    <span class="material-symbols-rounded">close</span>
+                <button class="close-btn hide">
+                    <span class="material-symbols-rounded">close</span> <!-- Ícone de fechar -->
                 </button>
             </div>
         </div>
     </div>
 </nav>
+
     </header>
     <main>
         
-<h1>Blog</h1>
 
-<!-- Featured Articles -->
-<div class="featured-container container">
+<div class="container">
+<nav class="pagination-links">
+  <ol class="pagination-links__list">
+    <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+    <li class="pagination-links__list__item"><a href="#">Blog</a></li>
+  </ol>
+</nav>
+<h1>Latest posts</h1>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cum distinctio earum, libero similique rerum assumenda eius esse sit impedit quae cumque, laborum ratione hic! Nam animi nesciunt excepturi dicta.</p>
+
+<!--! Featured Articles -- Adicionar loop !-->
+<div class="featured-container">
+  
   <div class="column left">
     <div class="image-container">
       <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
@@ -68,89 +112,23 @@
       <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
     </div>
   </div>
+  
 </div>
 
-<!-- Read All Articles -->
- <section class="container">
-  <h2>All articles</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita, dignissimos mollitia, illum qui, eos provident repellendus laborum alias atque delectus dolores neque accusantium maxime eligendi obcaecati repudiandae. Quasi, minima!</p>
-  <button>View all</button>
-  <div class="articles">
-  <ol role="list" class="articles__list">
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-    <li role="article">
-      <article class="articles__list__item">
-        <div>
-          <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder">
-        </div>
-        <h3>Article Title</h3>
-        <span>Categorie</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, ducimus? In eveniet ratione doloribus rem. Beatae nulla id deserunt, sequi numquam neque quis minima quas hic cum aliquam obcaecati repudiandae! <button>Read all</button> </p>
-        <span>Dec 10, 2024</span>
-      </article>
-    </li>
-  </ol>
-</div>
- </section>
 
-
-<!-- Loop de Conteúdo de Todos os Posts do Site -->
-
-<section class="container articles">
+<!-- Ler todos os artigos -->
+<section class="articles">
   <h2>All articles</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi facilis mollitia, earum porro veniam consequuntur eos et, eaque consequatur sit veritatis corporis placeat at excepturi iusto ipsum. Molestias, cumque.</p>
   <button>View all</button>
   <ol role="list" class="articles__list">
     
-      <li role="article" class="articles__list__item">
-        <a href="/blog/posts/post-5/">
-        <article>
-          <div>
-            <img src="/assets/images/blog/img-1.jpg" alt="">
-          </div>
-          <h3>Post de Exemplo 5</h3>
-          <span>Tutorials,Tips and Tricks</span>
-          <p>A descrição do meu post vai aqui</p>
-        </article>
-      </a>
-      </li>
-      
+    <!-- * Loop de Conteúdo de Todos os Posts do Site * -->
+    
       <li role="article" class="articles__list__item">
         <a href="/blog/posts/post-6/">
         <article>
-          <div>
+          <div class="articles__image">
             <img src="/assets/images/blog/img-1.jpg" alt="">
           </div>
           <h3>Post de Exemplo 6</h3>
@@ -160,7 +138,8 @@
       </a>
       </li>
       
-  </ol>
+  
+    </ol>
 </section>
 
 <!-- Paginação funcionando! -->
@@ -190,7 +169,7 @@
     <span class="disabled">Próxima Página →</span>
   
 </div>
-
+</div>
 
     </main>
 </body>
@@ -203,7 +182,8 @@
 <script src="/assets/scripts/scroll-x.js"></script>
 <script src="/assets/scripts/included.json"></script>
 <!-- Shoelace -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
+<script type="module"
+src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
 <!-- Testimonials -->
 <script type="module" src="/assets/scripts/main.js"></script>
 

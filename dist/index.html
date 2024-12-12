@@ -34,52 +34,54 @@
                 <li><a href="/blog">Blog</a></li>
             </ul>
         </div>
+
         <div class="nav__right">
-            <button>Book now</button>
-            <button>Login</button>
-            <button>Sign up</button>
-            <button>Dashboard</button>
-            <!-- User's Profile Menu -->
-            <button class="profile-picture">
-                <img src="/assets/images/blog/img-1.jpg" alt="Placeholder" width="48px">
-            </button>
-            <!-- Profile Dropdown -->
-            <div class="profile__dropdown">
-                <ul role="list">
-                    <header>
-                        <li role="listitem">
-                            <div class="profile-picture"><img src="/assets/images/blog/img-1.jpg" alt="Placeholder"
-                                    width="48px"></div>
-                        </li>
-                        <div>
-                            <li role="listitem">Ana Florentino</li>
-                            <li role="listitem">abmflorentino@gmail.com</li>
-                        </div>
-                    </header>
-                    <div>
-                        <li role="link"><a href="#">Profile</a></li>
-                        <li role="link"><a href="#">Subscription <span>Weekly</span></a></li>
-                        <li role="link"><a href="#">Cleanings</a></li>
-                    </div>
-                    <div>
-                        <li role="link"><a href="#">Help</a></li>
-                        <li role="link"><a href="#"><button>Logout</button></a></li>
-                    </div>
-                </ul>
+            <!-- Botões de login e signup -->
+            <button class="book-now">Book now</button>
+            <button class="dashboard hide">Dashboard</button>
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign up</button>
+
+            <!-- ? Profile Dropdown ? -->
+            <div class="nav__picture hide" id="profile-picture">
+                <img src="/assets/images/blog/img-1.jpg" alt="Placeholder">
             </div>
+            <!-- Profile Dropdown -->
+            <div class="nav__dropdown hide" id="profile-dropdown">
+                <div class="nav__dropdown__menu">
+                    <div class="user-info">
+                        <div class="nav__picture">
+                            <img src="/assets/images/blog/img-1.jpg" alt="Placeholder">
+                        </div>
+                        <h2>Ana Florentino</h2>
+                        <p>abmflorentino@gmail.com</p>
+                    </div>
+                    <div class="user-actions">
+                        <ul>
+                            <li><a href="#">Cleanings</a></li>
+                            <li><a href="#">Profile</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões do hambúrguer -->
             <div class="nav__hamburger">
-                <!-- Ícone de hambúrguer -->
                 <button class="hamburger-btn">
-                    <span class="material-symbols-rounded">menu</span>
+                    <span class="material-symbols-rounded">menu</span> <!-- Ícone do hambúrguer -->
                 </button>
-                <!-- Ícone de fechar (X) -->
-                <button class="close-btn">
-                    <span class="material-symbols-rounded">close</span>
+                <button class="close-btn hide">
+                    <span class="material-symbols-rounded">close</span> <!-- Ícone de fechar -->
                 </button>
             </div>
         </div>
     </div>
 </nav>
+
     </header>
     <main>
         
@@ -518,6 +520,56 @@
             </ul>
             <button>Contact us to free estimate</button>
         </div>
+    </div>
+</section>
+
+<!-- ! What's Included ! Adicionar template -->
+
+<!-- Coupons and Promotions -->
+<!-- ? Adicionar um 'save $XX' ? -->
+<section class="container">
+    <div class="promotions">
+        <ul class="promotions__list">
+            <li class="promotions__list__item">
+                <span>Save $48.00</span>
+                <div>
+                    <img src="assets/images/blog/img-1.jpg" alt="Placeholder">
+                </div>
+                <h3>Dream Kitchen</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit, laudantium maxime accusantium
+                    quibusdam ab quae cum.</p>
+                <button>Book from $190.00</button>
+            </li>
+            <li class="promotions__list__item">
+                <span>Save $48.00</span>
+                <div>
+                    <img src="assets/images/blog/img-1.jpg" alt="Placeholder">
+                </div>
+                <h3>Dream Kitchen</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit, laudantium maxime accusantium
+                    quibusdam ab quae cum.</p>
+                <button>Book from $190.00</button>
+            </li>
+            <li class="promotions__list__item">
+                <span>Save $48.00</span>
+                <div>
+                    <img src="assets/images/blog/img-1.jpg" alt="Placeholder">
+                </div>
+                <h3>Dream Kitchen</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit, laudantium maxime accusantium
+                    quibusdam ab quae cum.</p>
+                <button>Book from $190.00</button>
+            </li>
+            <li class="promotions__list__item">
+                <span>Save $48.00</span>
+                <div>
+                    <img src="assets/images/blog/img-1.jpg" alt="Placeholder">
+                </div>
+                <h3>Dream Kitchen</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit, laudantium maxime accusantium quibusdam ab quae cum.</p>
+                <button>Book from $190.00</button>
+            </li>
+        </ul>
     </div>
 </section>
     </main>
