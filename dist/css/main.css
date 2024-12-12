@@ -692,19 +692,24 @@ p {
   text-align: center;
 }
 
-.promotions__list {
+.promotions__list, .coupons__list {
   display: flex;
   gap: 1rem;
 }
-.promotions__list__item {
+.promotions__list__item, .coupons__list__item {
   flex: 1 1;
   position: relative;
   width: max-content;
 }
-.promotions__list__item span {
+.promotions__list__item .save, .coupons__list__item .save {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.coupons__list__item {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=main.css.map */

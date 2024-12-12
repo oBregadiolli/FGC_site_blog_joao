@@ -266,7 +266,7 @@
     }
 }
 
-.promotions {
+.promotions, .coupons {
     &__list {
         display: flex;
         gap: 1rem;
@@ -275,7 +275,7 @@
             position: relative;
             width: max-content;
 
-            span {
+            .save {
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -283,4 +283,9 @@
             }
         }
     }
+}
+
+.coupons__list__item {
+    display: flex;
+    flex-direction: column;
 }
