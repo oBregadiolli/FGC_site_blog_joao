@@ -778,4 +778,19 @@ p {
   flex: 1 1;
 }
 
+.faq {
+  display: flex;
+  justify-content: space-between;
+}
+.faq__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.faq__left form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
 /*# sourceMappingURL=main.css.map */
