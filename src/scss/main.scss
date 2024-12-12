@@ -378,3 +378,14 @@
         }
     }
 }
+
+// * Foooter
+.footer {
+    &__content {
+        display: flex;
+        gap: 1rem;
+        &__column {
+            flex: 1 1;
+        }
+    }
+}
