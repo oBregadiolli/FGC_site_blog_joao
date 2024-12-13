@@ -19,6 +19,7 @@ const formatDate = (date) => {
 const generateMarkdown = (data) => {
   return `
 ---
+layout: ${data.layout}
 title: ${data.title}
 date: ${formatDate(data.date)}
 author: ${data.author}

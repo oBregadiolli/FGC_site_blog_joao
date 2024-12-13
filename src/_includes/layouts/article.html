@@ -11,6 +11,49 @@
         {% include "header.html" %}
     </header>
     <main class="container">
-        {{ content | safe }}
+
+        <!-- Título dinâmico -->
+        <article class="article">
+            <h1>{{ title }}</h1>
+            <p>{{ description }}</p>
+
+            <!-- Imagem dinâmica -->
+            <div class="article__image">
+                <img src="{{ image }}" alt="Imagem do post">
+            </div>
+
+            <!-- Conteúdo dinâmico -->
+            {{ content | safe }}
+        </article>
+
+        <section class="featured">
+    <h2>Related articles</h2>
+    <ul class="featured__list">
+        {% for post in collections.featured %}
+            {% if post.url != page.url %}
+            <li role="article" class="featured__list__item">
+                <a href="{{ post.url }}">
+                    <article>
+                        <div class="featured__image">
+                            <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
+                        </div>
+                        <h3>{{ post.data.title }}</h3>
+                        <span>
+                            {% if post.data.categories %}
+                                {{ post.data.categories | join(", ") }}
+                            {% else %}
+                                Sem categorias
+                            {% endif %}
+                        </span>
+                        <p>{{ post.data.description }}</p>
+                    </article>
+                </a>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
+
+
     </main>
 </body>
