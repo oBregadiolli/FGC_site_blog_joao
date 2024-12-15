@@ -1,0 +1,58 @@
+<!-- ! Verificar porque o login não está retornando para a index ! -->
+<!-- Navbar -->
+<nav class="navbar">
+    <ul class="nav-list">
+        <div id="menu">
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+        </div>
+        <a href="/"><img
+                src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
+                alt=""></a>
+        <div class="nav-list-links">
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Subscription</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Coupons</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="#"><button id="book-now">Book now</button></a></li>
+        </div>
+    </ul>
+
+    <!-- Login e Signup -->
+    <div class="navbar-buttons">
+        <button class="book-now">Book now</button>
+        <button class="dashboard-button" id="dashboardButton">Dashboard</button>
+        <div class="auth-container" id="authContainer">
+            <!-- Content dynamically injected by JS -->
+        </div>
+    </div>
+</nav>
+
+
+<!-- Login Modal -->
+<div class="nav-modal" id="loginModal">
+    <div class="modal-content">
+        <h3>Login</h3>
+        <input type="email" id="modalEmail" placeholder="Email" required>
+        <input type="password" id="modalPassword" placeholder="Password" required>
+        <button id="modalLoginButton">Log In</button>
+        <button class="google-login-button" id="googleLoginButton">Log In with Google</button>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="nav-modal" id="signupModal">
+    <div class="modal-content">
+        <h3>Sign Up</h3>
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button id="signupModalButton">Sign Up</button>
+        <button class="google-login-button" id="googleSignupButton">Sign Up with Google</button>
+    </div>
+</div>

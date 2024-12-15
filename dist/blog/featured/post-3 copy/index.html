@@ -18,70 +18,64 @@
 
 <body>
     <header>
-        <nav class="header">
-    <div class="container nav">
-        <div class="nav__left">
-            <a href="/"><img
-                    src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                    alt="Flash Guys Cleaning Company Logo"></a>
-            <ul class="nav__list">
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Subscription</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Coupons</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
+        <!-- ! Verificar porque o login não está retornando para a index ! -->
+<!-- Navbar -->
+<nav class="navbar">
+    <ul class="nav-list">
+        <div id="menu">
+            <span class="material-symbols-rounded">
+                menu
+            </span>
         </div>
+        <a href="/"><img
+                src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
+                alt=""></a>
+        <div class="nav-list-links">
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Subscription</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Coupons</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="#"><button id="book-now">Book now</button></a></li>
+        </div>
+    </ul>
 
-        <div class="nav__right">
-            <!-- Botões de login e signup -->
-            <button class="book-now">Book now</button>
-            <button class="dashboard hide">Dashboard</button>
-            <button class="login-btn">Login</button>
-            <button class="signup-btn">Sign up</button>
-
-            <!-- ? Profile Dropdown ? -->
-            <div class="nav__picture hide" id="profile-picture">
-                <img src="/assets/images/blog/img-1.jpg" alt="Placeholder">
-            </div>
-            <!-- Profile Dropdown -->
-            <div class="nav__dropdown hide" id="profile-dropdown">
-                <div class="nav__dropdown__menu">
-                    <div class="user-info">
-                        <div class="nav__picture">
-                            <img src="/assets/images/blog/img-1.jpg" alt="Placeholder">
-                        </div>
-                        <h2>Ana Florentino</h2>
-                        <p>abmflorentino@gmail.com</p>
-                    </div>
-                    <div class="user-actions">
-                        <ul>
-                            <li><a href="#">Cleanings</a></li>
-                            <li><a href="#">Profile</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Botões do hambúrguer -->
-            <div class="nav__hamburger">
-                <button class="hamburger-btn">
-                    <span class="material-symbols-rounded">menu</span> <!-- Ícone do hambúrguer -->
-                </button>
-                <button class="close-btn hide">
-                    <span class="material-symbols-rounded">close</span> <!-- Ícone de fechar -->
-                </button>
-            </div>
+    <!-- Login e Signup -->
+    <div class="navbar-buttons">
+        <button class="book-now">Book now</button>
+        <button class="dashboard-button" id="dashboardButton">Dashboard</button>
+        <div class="auth-container" id="authContainer">
+            <!-- Content dynamically injected by JS -->
         </div>
     </div>
 </nav>
 
+
+<!-- Login Modal -->
+<div class="nav-modal" id="loginModal">
+    <div class="modal-content">
+        <h3>Login</h3>
+        <input type="email" id="modalEmail" placeholder="Email" required>
+        <input type="password" id="modalPassword" placeholder="Password" required>
+        <button id="modalLoginButton">Log In</button>
+        <button class="google-login-button" id="googleLoginButton">Log In with Google</button>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="nav-modal" id="signupModal">
+    <div class="modal-content">
+        <h3>Sign Up</h3>
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button id="signupModalButton">Sign Up</button>
+        <button class="google-login-button" id="googleSignupButton">Sign Up with Google</button>
+    </div>
+</div>
     </header>
     <main class="container">
 
@@ -106,70 +100,51 @@
         </article>
 
         <section class="featured">
-    <h2>Related articles</h2>
-    <ul class="featured__list">
-        
-            
-            <li role="article" class="featured__list__item">
-                <a href="/blog/featured/post-1 copy/">
-                    <article>
-                        <div class="featured__image">
-                            <img src="/assets/images/blog/img-1.jpg" alt="">
-                        </div>
-                        <h3>Post de Exemplo 1</h3>
-                        <span>
-                            
+            <h2>Related articles</h2>
+            <ul class="featured__list">
+                
+                
+                <li role="article" class="featured__list__item">
+                    <a href="/blog/featured/post-1 copy/">
+                        <article>
+                            <div class="featured__image">
+                                <img src="/assets/images/blog/img-1.jpg" alt="">
+                            </div>
+                            <h3>Post de Exemplo 1</h3>
+                            <span>
+                                
                                 Tutorials, Tips and Tricks
-                            
-                        </span>
-                        <p>A descrição do meu post vai aqui</p>
-                    </article>
-                </a>
-            </li>
-            
-        
-            
-            <li role="article" class="featured__list__item">
-                <a href="/blog/featured/post-2 copy/">
-                    <article>
-                        <div class="featured__image">
-                            <img src="/assets/images/blog/img-1.jpg" alt="">
-                        </div>
-                        <h3>Post de Exemplo 2</h3>
-                        <span>
-                            
+                                
+                            </span>
+                            <p>A descrição do meu post vai aqui</p>
+                        </article>
+                    </a>
+                </li>
+                
+                
+                
+                <li role="article" class="featured__list__item">
+                    <a href="/blog/featured/post-2 copy/">
+                        <article>
+                            <div class="featured__image">
+                                <img src="/assets/images/blog/img-1.jpg" alt="">
+                            </div>
+                            <h3>Post de Exemplo 2</h3>
+                            <span>
+                                
                                 Tutorials, Tips and Tricks
-                            
-                        </span>
-                        <p>A descrição do meu post vai aqui</p>
-                    </article>
-                </a>
-            </li>
-            
-        
-            
-        
-            
-            <li role="article" class="featured__list__item">
-                <a href="/blog/featured/post-4 copy/">
-                    <article>
-                        <div class="featured__image">
-                            <img src="/assets/images/blog/img-1.jpg" alt="">
-                        </div>
-                        <h3>Post de Exemplo 4</h3>
-                        <span>
-                            
-                                Tutorials, Tips and Tricks
-                            
-                        </span>
-                        <p>A descrição do meu post vai aqui</p>
-                    </article>
-                </a>
-            </li>
-            
-        
-    </ul>
-</section>
+                                
+                            </span>
+                            <p>A descrição do meu post vai aqui</p>
+                        </article>
+                    </a>
+                </li>
+                
+                
+                
+                
+            </ul>
+        </section>
 
 
     </main>

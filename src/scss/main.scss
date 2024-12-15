@@ -8,7 +8,7 @@
 @use 'base/icons';
 
 // Componentes
-@use './components/nav.scss';
+@use './components/navbar.scss';
 @use './components/cards.scss';
 @use './components/accordion.scss';
 @use './components/pagination.scss';
@@ -412,3 +412,4 @@
         }
     }
 }
+
