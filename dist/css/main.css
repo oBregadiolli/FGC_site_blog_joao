@@ -301,6 +301,7 @@ p {
   height: 100%;
 }
 
+/* Estilos gerais da hero */
 .hero {
   display: flex;
   justify-content: flex-start;
@@ -309,6 +310,10 @@ p {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  flex-direction: row; /* Garantir que fique em linha por padrão */
+  /* Container do conteúdo da hero (texto e botão) */
+  /* Imagem da hero */
+  /* Formulário posicionado sobre a imagem */
 }
 .hero__content {
   z-index: 10;
@@ -320,21 +325,17 @@ p {
 }
 .hero__content h1 {
   margin-bottom: 10px;
-  max-width: 48%;
 }
 .hero__content p {
   margin-bottom: 20px;
-  max-width: 48%;
-}
-.hero .cta-button {
-  padding: 10px 20px;
 }
 .hero__image {
-  position: absolute;
+  position: relative;
   top: 0;
-  right: -50%;
+  flex: 1;
+  right: 0;
   height: 100%;
-  width: 100vw;
+  width: 50vh;
   overflow: visible;
 }
 .hero__image img {
@@ -344,75 +345,330 @@ p {
   position: relative;
   margin-left: 1.5rem;
 }
+.hero__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translate(20%, -50%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  width: 80%;
+  max-width: 400px;
+}
+.hero__form form {
+  display: flex;
+  flex-direction: column;
+}
+.hero__form input,
+.hero__form button {
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.hero__form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+.hero__form button:hover {
+  background-color: #0056b3;
+}
 
+/* Responsividade */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
-    height: auto;
+    flex-direction: column; /* Mudar para coluna em telas menores */
+    height: auto; /* Ajustar a altura da hero para não sobrecarregar a tela */
   }
   .hero__content {
-    max-width: 100%;
-    padding: 0 20px;
+    text-align: center; /* Alinhar o conteúdo ao centro */
     margin-bottom: 20px;
   }
-  .hero__image {
-    position: relative;
-    right: 0;
-    width: 100%;
-    height: auto;
-  }
-  .hero__image img {
-    object-fit: cover;
-    width: 100%;
-    height: 300px;
-  }
-}
-@media (max-width: 740px) {
-  .hero__content {
-    padding: 0 10px;
-  }
-  .hero__image img {
-    height: 200px;
+  .hero__form {
+    width: 90%;
+    transform: translate(-50%, 40%);
   }
   .hero__image {
-    position: relative;
-    /* Remove a posição absoluta para telas pequenas */
-    right: 0;
-    /* Remove o transbordo da imagem */
-    width: 100%;
-    /* Faz a imagem ocupar toda a largura da tela */
-    height: auto;
-    /* A altura é ajustada automaticamente */
-  }
-  .hero__image img {
-    object-fit: cover;
-    /* Garante que a imagem cubra a tela adequadamente */
-    width: 100%;
-    /* Faz a imagem ocupar toda a largura da tela */
-    height: 300px;
-    /* Ajusta a altura da imagem para telas menores */
-    margin-left: 0rem;
-  }
-  /* Responsividade para telas pequenas */
-}
-@media (max-width: 740px) and (max-width: 768px) {
-  .hero__image {
-    position: relative;
-    right: 0;
-    /* Remove o transbordo da imagem */
-    width: 100%;
-    /* A imagem ocupa toda a largura da tela */
     height: 70vh;
-    /* A altura da imagem é ajustada automaticamente */
-    object-fit: cover;
-    /* Garante que a imagem cubra a tela adequadamente */
-    overflow: hidden;
-    /* Impede que o conteúdo transborde */
+    width: 100%;
+    margin-left: 0;
   }
   .hero__image img {
-    height: 100%;
+    margin-left: 0;
   }
 }
+@media (max-width: 480px) {
+  .hero {
+    height: auto; /* Remover altura fixa em telas muito pequenas */
+  }
+  .hero__form {
+    width: 95%;
+    transform: translate(-50%, 30%);
+  }
+  .hero__image {
+    min-height: 80vh;
+  }
+  .hero__content {
+    padding: 10px; /* Adicionar algum espaçamento no conteúdo */
+  }
+}
+/* Estilos do formulário e select */
+.hero__form {
+  width: 300px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+.hero__form .custom-select {
+  position: relative;
+  margin-bottom: 20px;
+}
+.hero__form .custom-select select {
+  width: 100%;
+  padding: 10px 30px 10px 10px; /* Ajusta o padding para dar espaço para a seta */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* Remove a aparência padrão do select */
+  background-color: white;
+  cursor: pointer;
+}
+.hero__form .custom-select .material-symbols-rounded.arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Posiciona a seta dentro do select */
+  transform: translateY(-50%); /* Centraliza a seta verticalmente */
+  font-size: 24px;
+  pointer-events: none; /* Impede que a seta seja clicada, mantendo a funcionalidade do select */
+}
+.hero__form .cta-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.hero__form .cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Seletor customizado com ícone fixo no input */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
+
+.select-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.selected-option {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.selected-icon {
+  font-size: 20px;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.option {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+.custom-select.active .select-options {
+  display: block;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.select-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.select-box .fixed-icon {
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+  font-size: 24px; /* Tamanho do ícone */
+}
+
+.select-box .selected-option {
+  flex-grow: 1;
+}
+
+.select-box .arrow {
+  font-size: 24px; /* Tamanho da seta */
+}
+
+.select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.select-options .option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select-options .option:hover {
+  background-color: #f4f4f4;
+}
+
+.custom-select.open .select-options {
+  display: block;
+}
+
+.custom-select.open .select-box .arrow {
+  transform: rotate(180deg); /* Inverte a seta quando o menu está aberto */
+}
+
+.select-box .arrow {
+  font-size: 24px; /* Tamanho da seta */
+  transform-origin: center; /* Garante que a seta gire ao redor do centro */
+}
+
+.select-options {
+  display: none; /* Esconde as opções inicialmente */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.select-box {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 5px;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.toggle-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-slider {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-slider:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.toggle-text {
+  margin-left: 15px;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.toggle-input:checked + .toggle-slider {
+  background-color: #007bff;
+}
+
+.toggle-input:checked + .toggle-slider:before {
+  transform: translateX(30px);
+}
+
+.toggle-input:checked ~ .toggle-text {
+  color: #007bff;
+}
+
 #testimonials-container {
   display: flex;
   gap: 1em;
