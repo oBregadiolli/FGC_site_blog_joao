@@ -37,7 +37,9 @@
   .auth-container {
     position: relative;
     display: flex;
+    gap: .4rem;
     align-items: center;
+    margin-inline-end: .4rem;
   }
   
   .profile-button {
@@ -124,19 +126,7 @@
         margin: 10px 0;
         box-sizing: border-box;
       }
-  
-      button {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #0056b3;
-        }
-      }
+
     }
   }
   

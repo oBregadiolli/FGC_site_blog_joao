@@ -51,7 +51,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.925);
         transform: translate(20%, -50%);
         padding: 20px;
         border-radius: 8px;
@@ -65,24 +65,14 @@
             flex-direction: column;
         }
 
-        input,
-        button {
+        input {
             padding: 12px;
             margin-bottom: 10px;
             font-size: 16px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
         }
 
-        button {
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-
-            &:hover {
-                background-color: #0056b3;
-            }
-        }
+      
+       
     }
 }
 
@@ -161,21 +151,6 @@
             transform: translateY(-50%); /* Centraliza a seta verticalmente */
             font-size: 24px;
             pointer-events: none; /* Impede que a seta seja clicada, mantendo a funcionalidade do select */
-        }
-    }
-
-    .cta-button {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #0056b3;
         }
     }
 }
@@ -393,3 +368,5 @@
   .toggle-input:checked ~ .toggle-text {
     color: #007bff;
   }
+
+  

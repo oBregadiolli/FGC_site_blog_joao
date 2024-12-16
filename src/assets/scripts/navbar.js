@@ -75,8 +75,8 @@ async function checkAuth() {
     }
   } else {
     authContainer.innerHTML = `
-      <button id="loginButton">Log In</button>
-      <button id="signupButton">Sign Up</button>
+      <button id="loginButton" class="button button--secondary button--small">Log In</button>
+      <button id="signupButton" class="button button--secondary button--small">Sign Up</button>
     `;
 
     document.getElementById("loginButton").addEventListener("click", () => {

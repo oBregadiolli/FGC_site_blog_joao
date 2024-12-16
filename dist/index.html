@@ -44,11 +44,11 @@
 
     <!-- Login e Signup -->
     <div class="navbar-buttons">
-        <button class="book-now">Book now</button>
-        <button class="dashboard-button" id="dashboardButton">Dashboard</button>
+        <button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
+        <button class="book-now button button--primary button--small">Book now</button>
     </div>
 </nav>
 
@@ -95,9 +95,9 @@
             <li><span class="material-symbols-rounded">check</span>24h professional team</li>
         </ul>
         <!-- CTA -->
-        <div>
-            <a href="#" class="cta-button">Free estimate</a>
-            <a href="#" class="cta-button">Book now</a>
+        <div class="cta">
+            <a href="#" class="button button--secondary">Free estimate</a>
+            <a href="#" class="button button--primary">Book now</a>
         </div>
     </div>
     <div class="hero__image">
@@ -106,7 +106,8 @@
     </div>
     <div class="hero__form">
         <form action="#">
-            <!-- Seletor de Cleaning Type -->
+
+            <!-- Seletor de Cleaning Type
             <div class="custom-select">
                 <div class="select-box">
                     <span class="selected-icon material-symbols-rounded">cleaning_services</span>
@@ -136,7 +137,7 @@
                         <span class="material-symbols-rounded">hourglass_top</span> Hire-by-the-hour
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
             <!-- Seletor de Quartos -->
             <div class="custom-select">
@@ -161,7 +162,7 @@
                     <span class="toggle-text">Pet friendly / Eco-friendly</span>
                 </label>
             </div>
-            <button type="submit" class="cta-button">Free Estimate</button>
+            <button type="submit" class="button button--primary">Free Estimate</button>
         </form>
     </div>
 </section>
@@ -171,7 +172,7 @@
 <section>
     <div class="container">
         <h2>What our clients say</h2>
-        <button>Make a review</button>
+        <button class="button button--secondary button--small">Make a review</button>
         <div id="testimonials-container">
             <!-- *Conteúdo dinâmico: 'assets/scripts/testimonialsData.js * -->
         </div>
@@ -244,9 +245,10 @@
                     <button>Learn more</button>
                 </div>
             </li>
-            <div>
-                <button>Free estimate</button>
-                <button>Book now</button>
+            <!-- CTA -->
+            <div class="cta">
+                <a href="#" class="button button--secondary">Free estimate</a>
+                <a href="#" class="button button--primary">Book now</a>
             </div>
         </ul>
 
@@ -303,9 +305,10 @@
         <ul role="list" class="services__included" id="included-services">
             <!-- * Conteúdo dinâmico: 'assets/scripts/services.js * -->
         </ul>
-        <div>
-            <button>Free estimate</button>
-            <button>Book now</button>
+        <!-- CTA -->
+        <div class="cta">
+            <a href="#" class="button button--secondary">Free estimate</a>
+            <a href="#" class="button button--primary">Book now</a>
         </div>
     </div>
 </section>
@@ -357,7 +360,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, natus! Esse eaque cumque
                         blanditiis deleniti rerum quibusdam impedit eius, ipsum sequi voluptate delectus repellendus
                         commodi aspernatur! Eum, cum officiis. Repudiandae.</p>
-                    <button>Keep reading</button>
+                    <a href="#" class="button button--primary">Keep reading</a>
                 </article>
             </li>
             <li role="article">
@@ -383,7 +386,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, natus! Esse eaque cumque
                         blanditiis deleniti rerum quibusdam impedit eius, ipsum sequi voluptate delectus repellendus
                         commodi aspernatur! Eum, cum officiis. Repudiandae.</p>
-                    <button>Keep reading</button>
+                    <a href="#" class="button button--primary">Keep reading</a>
                 </article>
             </li>
             <li role="article">
@@ -409,7 +412,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, natus! Esse eaque cumque
                         blanditiis deleniti rerum quibusdam impedit eius, ipsum sequi voluptate delectus repellendus
                         commodi aspernatur! Eum, cum officiis. Repudiandae.</p>
-                    <button>Keep reading</button>
+                    <a href="#" class="button button--primary">Keep reading</a>
                 </article>
             </li>
         </ul>
@@ -472,7 +475,7 @@
                     <li role="listitem">4 extras additional per month</li>
                     <li role="listitem">Guaranteed recall</li>
                 </ul>
-                <button>Subscribe</button>
+                <a href="#" class="button button--primary">Subscribe</a>
                 <footer>
                     <span>Charged for each cleaning*</span>
                 </footer>
@@ -496,7 +499,7 @@
                     <li role="listitem">4 extras additional per month</li>
                     <li role="listitem">Guaranteed recall</li>
                 </ul>
-                <button>Subscribe</button>
+                <a href="#" class="button button--primary">Subscribe</a>
                 <footer>
                     <span>Charged for each cleaning*</span>
                 </footer>
@@ -520,7 +523,7 @@
                     <li role="listitem">4 extras additional per month</li>
                     <li role="listitem">Guaranteed recall</li>
                 </ul>
-                <button>Subscribe</button>
+                <a href="#" class="button button--primary">Subscribe</a>
                 <footer>
                     <span>Charged for each cleaning*</span>
                 </footer>
@@ -542,7 +545,8 @@
                 <h3>Dream Kitchen</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit, laudantium maxime accusantium
                     quibusdam ab quae cum.</p>
-                <button>Book from $190.00</button>
+                <a href="#" class="button button--primary">Book from $190</a>
+
             </li>
             <li class="promotions__list__item">
                 <span class="save">Save $48.00</span>
@@ -552,7 +556,8 @@
                 <h3>Dream Kitchen</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit, laudantium maxime accusantium
                     quibusdam ab quae cum.</p>
-                <button>Book from $190.00</button>
+                <a href="#" class="button button--primary">Book from $190</a>
+
             </li>
             <li class="promotions__list__item">
                 <span class="save">Save $48.00</span>
@@ -562,7 +567,8 @@
                 <h3>Dream Kitchen</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit, laudantium maxime accusantium
                     quibusdam ab quae cum.</p>
-                <button>Book from $190.00</button>
+                <a href="#" class="button button--primary">Book from $190</a>
+
             </li>
             <li class="promotions__list__item">
                 <span class="save">Save $48.00</span>
@@ -572,7 +578,8 @@
                 <h3>Dream Kitchen</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit, laudantium maxime accusantium
                     quibusdam ab quae cum.</p>
-                <button>Book from $190.00</button>
+                <a href="#" class="button button--primary">Book from $190</a>
+
             </li>
         </ul>
     </div>
@@ -669,7 +676,7 @@
                         consectetur adipisicing elit.</div>
                 </li>
             </ul>
-            <button>Contact us to free estimate</button>
+            <a href="#" class="button button--primary">Contact us for sales</a>
         </div>
     </div>
 </section>
@@ -749,7 +756,7 @@
             <form>
                 <input type="text" placeholder="Email">
                 <textarea name="message" id="message">Your message</textarea>
-                <button type="submit">Send message</button>
+                <button class="button button--small button--primary" type="submit">Send message</button>
             </form>
         </div>
     </div>

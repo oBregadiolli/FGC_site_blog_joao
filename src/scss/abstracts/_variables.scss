@@ -10,3 +10,55 @@ $font-styles: (
     letter-spacing: 0em
   ),
 );
+
+// * Colors *
+
+$bg-color: #ffff;
+
+// Primary
+$primary-50: #ffedf0;
+$primary-100: #ffc6d0;
+$primary-200: #ffaab9;
+$primary-300: #ff8399;
+$primary-400: #ff6b85;
+$primary-500: #ff4667;
+$primary-600: #e8405e;
+$primary-700: #b53249;
+$primary-800: #8c2739;
+$primary-900: #6b1d2b;
+
+// Text
+$text-50: #ebecee;
+$text-100: #c0c4c9;
+$text-200: #a2a7af;
+$text-300: #777f8a;
+$text-400: #5d6674;
+$text-500: #344051;
+$text-600: #2f3a4a;
+$text-700: #252d3a;
+$text-800: #1d232d;
+$text-900: #161b22;
+
+// Neutrals
+$neutrals-50: #f2f3f4;
+$neutrals-100: #d5d9dd;
+$neutrals-200: #c1c7cc;
+$neutrals-300: #a5adb5;
+$neutrals-400: #939da7;
+$neutrals-500: #788591;
+$neutrals-600: #6d7984;
+$neutrals-700: #555e67;
+$neutrals-800: #424950;
+$neutrals-900: #32383d;
+
+// Accent
+$accent-50: #e7f3fa;
+$accent-100: #b5daf0;
+$accent-200: #91c9e8;
+$accent-300: #5eb0de;
+$accent-400: #3fa1d7;
+$accent-500: #0f89cd;
+$accent-600: #0e7dbb;
+$accent-700: #0b6192;
+$accent-800: #084b71;
+$accent-900: #063a56;
