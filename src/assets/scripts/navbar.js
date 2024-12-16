@@ -129,40 +129,43 @@ document.getElementById("modalLoginButton").addEventListener("click", async () =
 // Signup normal
 document.getElementById("signupModalButton").addEventListener("click", async () => {
   const name = document.getElementById("signupName").value;
+  if (!validateFullName(name)) return; // Para a execução se o nome não é válido
+
   const email = document.getElementById("signupEmail").value;
   const phone = document.getElementById("signupPhone").value;
   const password = document.getElementById("signupPassword").value;
 
   const signupUrl = "https://flashguyscleaning.com/version-test/api/1.1/wf/auth";
   const signupPayload = {
-    email: email,
-    senha: password,
-    name: name,
-    phone: phone
+      email: email,
+      senha: password,
+      name: name,
+      phone: phone
   };
 
   try {
-    const response = await fetch(signupUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(signupPayload)
-    });
+      const response = await fetch(signupUrl, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(signupPayload)
+      });
 
-    const data = await response.json();
-    if (data.status === "success" && data.response) {
-      localStorage.setItem("user_id", data.response.user_id);
-      document.getElementById("signupModal").classList.remove("visible");
-      resetModalInputs("signupModal");
-      checkAuth();
-    } else {
-      alert("Sign up failed.");
-    }
+      const data = await response.json();
+      if (data.status === "success" && data.response) {
+          localStorage.setItem("user_id", data.response.user_id);
+          document.getElementById("signupModal").classList.remove("visible");
+          resetModalInputs("signupModal");
+          checkAuth();
+      } else {
+          alert("Sign up failed.");
+      }
   } catch (error) {
-    console.error("Sign up error:", error);
+      console.error("Sign up error:", error);
   }
 });
+
 
 // Login com Google (redireciona para a página do Bubble)
 document.getElementById("googleLoginButton").addEventListener("click", () => {
@@ -237,3 +240,16 @@ document.addEventListener("click", function(event) {
     menuIconSpan.textContent = "menu"; // Exibe novamente o ícone de menu
   }
 });
+
+function validateFullName(fullName) {
+  const names = fullName.trim().split(/\s+/); // Divide o nome por espaços, considerando espaços múltiplos
+  const errorLabel = document.getElementById("fullNameError");
+  if (names.length < 2) {
+      errorLabel.textContent = "Please enter your full name (first and last name).";
+      errorLabel.style.display = "block";
+      return false;
+  } else {
+      errorLabel.style.display = "none";
+      return true;
+  }
+}
