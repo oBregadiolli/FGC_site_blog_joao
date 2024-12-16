@@ -1,3 +1,5 @@
+
+
 async function fetchUserInfo(userId) {
   const userInfoUrl = "https://flashguyscleaning.com/version-test/api/1.1/wf/userinfo";
   const userInfoPayload = { id: userId };
@@ -92,6 +94,13 @@ async function checkAuth() {
   }
 }
 
+//MascaraTelefone
+document.addEventListener('DOMContentLoaded', function() {
+  var phoneInput = document.getElementById('signupPhone');
+  var im = new Inputmask("(999) 999-9999");
+  im.mask(phoneInput);
+});
+
 // Login normal
 document.getElementById("modalLoginButton").addEventListener("click", async () => {
   const email = document.getElementById("modalEmail").value;
@@ -129,11 +138,11 @@ document.getElementById("modalLoginButton").addEventListener("click", async () =
 // Signup normal
 document.getElementById("signupModalButton").addEventListener("click", async () => {
   const name = document.getElementById("signupName").value;
-  if (!validateFullName(name)) return; // Para a execução se o nome não é válido
-
   const email = document.getElementById("signupEmail").value;
   const phone = document.getElementById("signupPhone").value;
   const password = document.getElementById("signupPassword").value;
+
+  if (!validateFullName(name) || !validatePhone(phone)) return; // Interrompe o processo se o nome ou telefone não forem válidos
 
   const signupUrl = "https://flashguyscleaning.com/version-test/api/1.1/wf/auth";
   const signupPayload = {
@@ -165,6 +174,16 @@ document.getElementById("signupModalButton").addEventListener("click", async () 
       console.error("Sign up error:", error);
   }
 });
+
+function validatePhone(phone) {
+  const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/; // Regex para validar o formato (XXX) XXX-XXXX
+  if (!phoneRegex.test(phone)) {
+      alert("Please enter a valid phone number.");
+      return false;
+  }
+  return true;
+}
+
 
 
 // Login com Google (redireciona para a página do Bubble)
