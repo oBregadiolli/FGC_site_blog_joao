@@ -1,4 +1,4 @@
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     // Seleciona todos os elementos .custom-select
     const customSelects = document.querySelectorAll('.custom-select');
 
@@ -6,14 +6,29 @@
         const selectBox = customSelect.querySelector('.select-box');
         const selectOptions = customSelect.querySelector('.select-options');
         const selectedOption = customSelect.querySelector('.selected-option');
-        const selectedIcon = customSelect.querySelector('.selected-icon');
+        const selectedIcon = customSelect.querySelector('.selected-icon'); // Ícone fixo
         const options = customSelect.querySelectorAll('.option');
 
         // Toggle o dropdown (abre/fecha)
         selectBox.addEventListener('click', function () {
-            selectOptions.classList.toggle('active');
-            selectBox.parentElement.classList.toggle('active');
-            selectBox.querySelector('.arrow').classList.toggle('rotate');
+            // Abre ou fecha o dropdown
+            const isActive = selectOptions.classList.contains('active');
+            // Fechar todos os dropdowns, exceto o atual
+            document.querySelectorAll('.select-options.active').forEach(optionList => {
+                if (optionList !== selectOptions) {
+                    optionList.classList.remove('active');
+                }
+            });
+            // Se o dropdown não estiver ativo, ele será aberto
+            if (!isActive) {
+                selectOptions.classList.add('active');
+                selectBox.parentElement.classList.add('active');
+                selectBox.querySelector('.arrow').classList.add('rotate');
+            } else {
+                selectOptions.classList.remove('active');
+                selectBox.parentElement.classList.remove('active');
+                selectBox.querySelector('.arrow').classList.remove('rotate');
+            }
         });
 
         // Quando uma opção for selecionada
@@ -21,14 +36,10 @@
             option.addEventListener('click', function () {
                 const optionText = this.textContent.trim();
 
-                // Atualiza o texto da opção selecionada
-                selectedOption.textContent = optionText.substring(optionText.indexOf(' ') + 1); // Remove o ícone e exibe o nome
+                // Atualiza o texto da opção selecionada (sem alterar o ícone)
+                selectedOption.textContent = optionText;
 
-                // Atualiza o ícone da opção selecionada
-                const icon = this.querySelector('.material-symbols-rounded');
-                selectedIcon.textContent = icon.textContent;
-
-                // Fecha o dropdown
+                // Fecha o dropdown imediatamente após a seleção
                 selectOptions.classList.remove('active');
                 selectBox.parentElement.classList.remove('active');
                 selectBox.querySelector('.arrow').classList.remove('rotate');

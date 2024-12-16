@@ -277,7 +277,6 @@ p {
   cursor: not-allowed;
 }
 
-/* Estilo do botão primário */
 .button {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -286,6 +285,7 @@ p {
   text-align: center;
   text-decoration: none;
   border: none;
+  background-color: transparent;
   border-radius: 0.25rem;
   cursor: pointer;
   white-space: nowrap;
@@ -308,33 +308,30 @@ p {
   border: 1.5px solid #5d6674;
   color: #5d6674;
 }
+.button--tertiary {
+  background-color: transparent;
+  color: #344051;
+  border: 1.5px solid #ff4667;
+}
+.button--tertiary:hover {
+  background-color: transparent;
+  border: 1.5px solid #ff4667;
+  color: #5d6674;
+}
 .button--small {
   padding: 0.4rem 1rem;
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-/* Estilo do botão de sucesso */
-.button-success {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
+.link {
+  color: #0f89cd;
   text-decoration: none;
-  border: 1px solid #28a745;
-  border-radius: 0.25rem;
-  background-color: #28a745;
-  color: #fff;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
 }
-.button-success:hover {
-  background-color: rgb(30.1449275362, 125.8550724638, 52);
-  border-color: rgb(30.1449275362, 125.8550724638, 52);
-}
-.button-success:focus {
-  outline: none;
+.link:hover {
+  color: #0e7dbb;
 }
 
 .container {
@@ -659,7 +656,7 @@ p {
   position: relative;
   width: 60px;
   height: 30px;
-  background-color: #ccc;
+  background-color: #a5adb5;
   border-radius: 15px;
   transition: 0.3s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -680,12 +677,12 @@ p {
 .toggle-text {
   margin-left: 15px;
   font-size: 16px;
-  color: #333;
+  color: #a5adb5;
   transition: color 0.3s;
 }
 
 .toggle-input:checked + .toggle-slider {
-  background-color: #007bff;
+  background-color: #ff4667;
 }
 
 .toggle-input:checked + .toggle-slider:before {
@@ -693,7 +690,7 @@ p {
 }
 
 .toggle-input:checked ~ .toggle-text {
-  color: #007bff;
+  color: #344051;
 }
 
 #testimonials-container {
