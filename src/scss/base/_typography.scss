@@ -1,5 +1,7 @@
 // base/_typography.scss
 @use '../abstracts/mixins';
+@use '../abstracts/variables' as vars;
+
 
 h1 {
   @include mixins.responsive-font-map(h1);
@@ -7,4 +9,8 @@ h1 {
 
 p {
   @include mixins.responsive-font-map(p);
+}
+
+.text-highlight {
+  color: vars.$primary-500;
 }

@@ -20,6 +20,8 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
+        max-width: 1250px;
+        margin: 0 auto;
 
         h1 {
             margin-bottom: 10px;
@@ -245,6 +247,8 @@
 
 .select-box .selected-option {
     flex-grow: 1;
+    color: vars.$neutrals-500;
+    font-size: .8rem;
 }
 
 .select-box .arrow {
@@ -333,8 +337,8 @@
   
   .toggle-slider {
     position: relative;
-    width: 60px;
-    height: 30px;
+    width: 58px;
+    height: 28px;
     background-color: vars.$neutrals-300;
     border-radius: 15px;
     transition: 0.3s;
@@ -346,8 +350,8 @@
     position: absolute;
     top: 4px;
     left: 4px;
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     background-color: #fff;
     border-radius: 50%;
     transition: 0.3s;
@@ -355,7 +359,7 @@
   
   .toggle-text {
     margin-left: 15px;
-    font-size: 16px;
+    font-size: .9rem;
     color: vars.$neutrals-300;
     transition: color 0.3s;
   }
