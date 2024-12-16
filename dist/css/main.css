@@ -42,6 +42,7 @@ p {
 .navbar .logo {
   font-size: 1.5em;
   font-weight: bold;
+  margin-right: 1rem;
 }
 .navbar .navbar-buttons {
   display: flex;
@@ -50,7 +51,7 @@ p {
 .navbar .nav-list-links {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 0.2rem;
 }
 .navbar .nav-links a {
   color: rgb(31, 31, 31);
@@ -170,7 +171,7 @@ p {
   cursor: pointer;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1040px) {
   .nav-list-links li,
   .dashboard,
   .book-now {
@@ -332,6 +333,32 @@ p {
 }
 .link:hover {
   color: #0e7dbb;
+}
+
+.menu-link {
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  color: #5d6674;
+}
+.menu-link:hover {
+  color: #344051;
+  background-color: #f2f3f4;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.list li {
+  font-size: 1rem;
+}
+.list li img, .list li span {
+  vertical-align: middle;
+  margin-right: 0.2rem;
 }
 
 .container {
