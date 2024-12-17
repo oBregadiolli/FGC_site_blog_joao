@@ -1,3 +1,16 @@
+window.alert = function(message) {
+  var toastElement = document.querySelector('.toast');
+  var toast = new bootstrap.Toast(toastElement, {
+      autohide: true,
+      delay: 3000
+  });
+
+  // Define o corpo do toast para a mensagem do alerta
+  document.querySelector('.toast-body').textContent = message;
+
+  // Exibe o toast
+  toast.show();
+};
 
 
 async function fetchUserInfo(userId) {
@@ -183,7 +196,6 @@ function validatePhone(phone) {
   }
   return true;
 }
-
 
 
 // Login com Google (redireciona para a página do Bubble)

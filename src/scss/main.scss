@@ -416,3 +416,15 @@
     }
 }
 
+.img-toast-flashlogo{
+    width: 30px;
+    height: 30px;
+}
+
+.toast-container {
+    z-index: 1100; /* Maior que o z-index do modal */
+    position: fixed; /* Garante que o toast fique na posição correta na tela */
+    top: 0; /* Posiciona no topo da página */
+    right: 0; /* Posiciona à direita da página */
+    margin: 1em; /* Adiciona um pouco de espaço em torno do contêiner */
+}
